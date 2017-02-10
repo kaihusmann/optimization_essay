@@ -1,8 +1,42 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Corana et~al.(1987)Corana, Marchesi, Martini, and
+  Ridella]{Corana.1987}
+A.~Corana, M.~Marchesi, C.~Martini, and S.~Ridella.
+\newblock Minimizing multimodal functions of continuous variables with the
+  “simulated annealing” algorithm.
+\newblock \emph{ACM Trans. Math. Softw.}, 13\penalty0 (3):\penalty0 262--280,
+  1987.
+
+\bibitem[Dantzig et~al.(1959)Dantzig, Fulkerson, and Johnson]{Dantzig.1959}
+G.~B. Dantzig, D.~R. Fulkerson, and S.~M. Johnson.
+\newblock On a linear-programming, combinatorial approach to the
+  traveling-salesman problem.
+\newblock \emph{Operations Research}, 7\penalty0 (1):\penalty0 58--66, 1959.
+
+\bibitem[Nelder and Mead(1965)]{Nelder.1965}
+J.~Nelder and R.~Mead.
+\newblock A simplex method for function minimization.
+\newblock \emph{Computer Journal}, 7\penalty0 (4):\penalty0 308--313, 1965.
+
+\bibitem[Pronzato et~al.(1984)Pronzato, Walter, Venot, and
+  Lebruchec]{Pronzato.1984}
+L.~Pronzato, E.~Walter, A.~Venot, and J.-F. Lebruchec.
+\newblock A general-purpose global optimizer: Implimentation and applications.
+\newblock \emph{Mathematics and Computers in Simulation}, 26\penalty0
+  (5):\penalty0 412--422, 1984.
+\newblock ISSN 03784754.
+\newblock \doi{10.1016/0378-4754(84)90105-8}.
+
+\bibitem[Wegener(2005)]{Wegener.2005}
+I.~Wegener.
+\newblock Simulated annealing beats metropolis in combinatorial optimization.
+\newblock In \emph{International Colloquium on Automata, Languages, and
+  Programming}, pages 589--601. Springer, 2005.
 
 \end{thebibliography}
