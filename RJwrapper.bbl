@@ -19,10 +19,11 @@ G.~B. Dantzig, D.~R. Fulkerson, and S.~M. Johnson.
   traveling-salesman problem.
 \newblock \emph{Operations Research}, 7\penalty0 (1):\penalty0 58--66, 1959.
 
-\bibitem[Nelder and Mead(1965)]{Nelder.1965}
-J.~Nelder and R.~Mead.
-\newblock A simplex method for function minimization.
-\newblock \emph{Computer Journal}, 7\penalty0 (4):\penalty0 308--313, 1965.
+\bibitem[Kirkpatrick et~al.(1983)Kirkpatrick, Gelatt, Vecchi,
+  et~al.]{Kirkpatrick.1983}
+S.~Kirkpatrick, C.~D. Gelatt, M.~P. Vecchi, et~al.
+\newblock Optimization by simulated annealing.
+\newblock \emph{science}, 220\penalty0 (4598):\penalty0 671--680, 1983.
 
 \bibitem[Pronzato et~al.(1984)Pronzato, Walter, Venot, and
   Lebruchec]{Pronzato.1984}

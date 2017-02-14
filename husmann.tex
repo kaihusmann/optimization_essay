@@ -10,9 +10,13 @@ An abstract of less than 150 words.
 
 \section{Introduction}
 
-As early optimization methods occurred with the first digital computers \citep{Corana.1987}, nowadays several optimization methods for various purposes are available \citep{Wegener.2005}. According to the definition by \citet{Pronzato.1984}, optimization is the finding of an optimum with respect to one or more parameters and optional restrictions. Optimization procedures can be separated into two groups depending on their field of application. In case the loss function shows relatively simple responses, long-established and well-known exact optimization methods, e. g. the Linear Simplex-Method \citep{Dantzig.1959}, are usually the most efficient way to solve optimization problems. If all assumptions on loss and model restrictions are met, these methods will obligatorily find the exact solution. If, however, one of the assumptions (e. g. linearity or unimodality) is violated, more general optimization procedures must be applied to solve problems properly.  
+As early computer-based optimization methods developed contemporaneously with the first digital computers \citep{Corana.1987}, nowadays numerous optimization methods for various purposes are available \citep{Wegener.2005}. One of the main challenges in Operations Research is thus to match the optimization problem with a reasonable method. According to  \citet{Kirkpatrick.1983}, optimization procedures in general can be distinguished into exact methods and heuristics. In case the loss function of the optimization problem shows quite simple responses, exact methods are often meaningful tools of choice. If all assumptions on model loss and restrictions are met, these methods will obligatorily find the exact solution. 
+Exact methods are advantageous since they do not need much parameterizations. The  Linear Simplex-Method \citep{Dantzig.1959} as an example only needs the loss-function and optional restrictions as model input. If, however, any of the model assumptions, e. g. linearity or unimodality, is violated, exact methods are unable to solve the problems properly. Practically, they thus lack applicability whenever a loss function is too complex. With developing computer power 
+Heuristics
 
+, more general heuristics must be applied to solve problems properly. While heuristics can be parameterized
 
+the definition by \citet{Pronzato.1984}, optimization is the finding of an optimum with respect to a vector of parameters.
 
 This section may contain a figure such as Figure~\ref{figure:rlogo}.
 
