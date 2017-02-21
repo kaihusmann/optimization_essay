@@ -19,6 +19,7 @@ The \textbf{R} software environment provides platform for simple and effective d
 \section{Method}
 Simulated Annealing and its derivations are well document in the scientific literature \citep[e. g. in][]{hansen_2012,kirkpatrick_1983, xiang_2013}. We thus mainly concentrate in our methods description on modified and novel implementations. The classic SA is composed of an inner for and an outer while loop \citep{kirkpatrick_1983}. Since the basic idea of Simulated Annealing is derived from the physical process of metal annealing, the nomenclature of SA comes particularly from metallurgy. The number of iterations in both loops are user predefined.\\
 
+\SetAlCapSkip{2ex}
 \begin{algorithm}[H]
 	initialize $t$, $vf$ with user specifications\\
 	calculate $f(x_0)$ with initial parameter vector $x_0$\\
@@ -67,7 +68,7 @@ The variation function must be in form of an \textbf{R} function. Defaul is...
 
 \section{Practical examples}
 \subsection{Rosenbrock Function}
-Simple Integer Programming example.
+Simple Integer Programming example. Visual plot inspection.
 \subsection{SVAR}
 Alex
 \subsection{Forest Harvesting Schedule Optimization}
