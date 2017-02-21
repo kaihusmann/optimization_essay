@@ -1,5 +1,5 @@
 % !TeX root = RJwrapper.tex
-\title{Multi-Purpose Optimization with flexible Simulated-Annealing}
+\title{Multi-Purpose Global Optimization by flexible Simulated-Annealing}
 \author{by Kai Husmann, Alexander Lange (and Elmar Spiegel)}
 
 \maketitle
@@ -10,35 +10,81 @@ An abstract of less than 150 words.
 
 \section{Introduction}
 
-As early computer-based optimization methods developed contemporaneously with the first digital computers \citep{Corana.1987}, nowadays numerous optimization methods for various purposes are available \citep{Wegener.2005}. One of the main challenges in Operations Research is thus to match the optimization problem with a reasonable method. According to  \citet{Kirkpatrick.1983}, optimization procedures in general can be distinguished into exact methods and heuristics. In case the loss function of the optimization problem shows quite simple responses, exact methods are often meaningful tools of choice. If all assumptions on model loss and restrictions are met, these methods will obligatorily find the exact solution. 
-Exact methods are advantageous since they do not need much parameterizations. The  Linear Simplex-Method \citep{Dantzig.1959} as an example only needs the loss-function and optional restrictions as model input. If, however, any of the model assumptions, e. g. linearity or unimodality, is violated, exact methods are unable to solve the problems properly. Practically, they thus lack applicability whenever a loss function is too complex. With developing computer power 
-Heuristics
+As early computer-based optimization methods developed contemporaneously with the first digital computers \citep{corana_1987}, nowadays numerous optimization methods for various purposes are available \citep{wegener_2005}. One of the main challenges in Operations Research is therefore to match the optimization problem with a reasonable method. According to  \citet{kirkpatrick_1983}, optimization procedures in general can be distinguished into exact methods and heuristics. In case the loss function of the optimization problem shows quite simple responses, exact methods are often meaningful tools of choice. If all assumptions on model loss and restrictions are met, these methods will obligatorily find the exact solution without need for further parameters. The  Linear Simplex-Method \citep{dantzig_1959} as an example only needs the loss-function and optional restrictions as model input. If, however, any of the model assumptions, e. g. linearity or unimodality, is violated, exact methods are unable to solve the problems validly. In practice, they thus lack applicability whenever a loss function is too complex. With developing computer power heuristics like the Savings-Algorithm \citep{clarke_1964} and metaheuristics became more and more popular. Both enable solving optimization problems of more flexible loss functions. Metaheuristics are a generalization of heuristics with aim to be even more flexible and efficient \citep{blum_2003}. Depending on the method of choice, more or less assumptions on the loss function can be neglected. On the other hand heuristics and metaheuristics will always solve problems approximately. Precision of the solution depends on loss, optimization method and further parameterizations of the respective method. There is even no guaranty of approximating the actual optimum since the solution also depends, by contrast to exact methods, on loss, method and parameterization \citep{blum_2003}. Heuristic and metaheuristic methods will thus always need additional parameters next to the loss function. Finding the proper model parameters is thus a crucial point when applying heuristic or metaheuristic algorithms. The complexity of parameterization will by trend increase with flexibility of the method. Direct search methods like the Nelder-Mead algorithm are comparatively efficient methods which directly converge to the functions optimum and need relatively less settings \citep{geiger_1999}. Random search methods are able to cope with multimodal objective functions as they have a random component which allows leaving local optima. The efficiency and accuracy of such models is usually highly sensitive to their parameter specification \citep{corana_1987}.\\
 
-, more general heuristics must be applied to solve problems properly. While heuristics can be parameterized
+Simulated Annealing (SA) \citep{kirkpatrick_1983} is known to be one of the oldest and one of the most flexible and generalized metaheuristic method \citep{blum_2003}. It is known to be favorable against most other methods for multimodal loss functions with a very high number of covariates \citep{corana_1987}. The method was applied in many studies among several fields covering e. g. chemistry \citep{agostini_2006}, econometrics \citep{ingber_1993} or forest sciences \citep{baskent_2002}. Since its first implementation by \citet{kirkpatrick_1983}, many authors have modified the algorithm in order to adopt it for specific problems \citep[e. g.][]{desarbo_1989, goffe_1996} or make it more efficient \citep[e. g.][]{xiang_2013}. It is basically a combination of systematic and a stochastic components. The stochastic part of the algorithm allows keeping worse responses in each iteration step during the optimization process. This enables searching for the global optimum even for multimodal loss functions. As it offers a lot of options, SA can be named as hybrid method between a general optimizer (when default values are chosen) and a problem specific optimization program \citep{wegener_2005}. \citet{corana_1987} developed a dynamic adoption method for the variation of the stochastic component during the optimization process. Their modification affects the efficiency as well as the accuracy of the SA algorithm. It has potential to substantially improve the method. \citet{pronzato_1984} suggest to decrease the search-domain of the random component with increasing number of iterations. The stochastic component in general is the most sensitive part of the method since it actually determines the loss variables modification during the iterations.\\
 
-the definition by \citet{Pronzato.1984}, optimization is the finding of an optimum with respect to a vector of parameters.
+The \textbf{R} software environment provides platform for simple and effective distribution of statistical models to a huge user community \citep{xiang_2013}. Thus, not surprisingly, several optimization packages of high quality can currently be purchased via the \textbf{Comprehensive R Archive Network} \citep{theussl_2016}. Even the SA method is recently listed 5 times on \textbf{CRAN}. We, however, believe, a package which copes with very flexible loss functions and rules for the stochastic component could be an advantageous extension for \textbf{R}. We present the package \textbf{optimization} where we implemented a modified version of SA. It is, as far as we know, the first function that combines SA with the extensions of \citet{corana_1987} and \citet{pronzato_1984}. Main difference of our approach to existing random-search methods is its flexibility. It allows several user specifications which help to parameterize the model very problem-specific. Next to the high number of parameters that may influence accuracy and speed of the solution, remarkable novelties of our model are the ability of flexibly defining loss function as well as covariate changing rules. The user can thus directly influence the stochastic part of the algorithm. Visual post-hoc inspection of the model convergence facilitate assessment of the solution quality. We show in practical 3 examples where our model can be useful and how it can be parameterized.\\
+
+\section{Method}
+Simulated Annealing and its derivations are well document in the scientific literature \citep[e. g. in][]{hansen_2012,kirkpatrick_1983, xiang_2013}. We thus mainly concentrate in our methods description on modified and novel implementations. The classic SA is composed of an inner for and an outer while loop \citep{kirkpatrick_1983}. Since the basic idea of Simulated Annealing is derived from the physical process of metal annealing, the nomenclature of SA comes particularly from metallurgy. The number of iterations in both loops are user predefined.\\
+
+\begin{algorithm}[H]
+	initialize $t$, $vf$ with user specifications\\
+	calculate $f(x_0)$ with initial parameter vector $x_0$\\
+	\While{$t$ $>$ $t_{min}$}{
+		\For{i in c(1: $n_{inner}$)}{
+			$x_j \gets x_{(i-1)}$\\
+			call the variation function to generate $x_{i*}$ in dependence of $x_{j}$, $rf$ and $t$\\
+			check if all entries in $x_{i*}$ are within the boundaries\\
+			\eIf{all $x_i$ valid}{calculate $f(x_{i*})$}{
+				\While{any($x_{i*}$ invalid)}{
+					call the variation function again\\
+					count invalid combinations}
+			}
+			\eIf{$f(x_{i*}) < f(x_j)$}{
+				$x_{i} \gets x_{i*}; f(x_{i}) \gets f(x_{i*})$
+			}{calculate Metropolis Probability in dependence of $t$\\ \eIf{random 
+				number $<$ Metropolis probability}{store $x_j$ and $f(x_j)$\\$x_{i} \gets x_{i*}; f(x_{i}) \gets f(x_{i*})$}{$x_{i} \gets x_j; f(x_{i}) \gets f(x_j)$}}
+		\If{threshold accepting criterion fulfilled}{break inner loop}
+	}
+	
+	{
+		reduce $t$ for the next iteration\\
+		$vf$ adaptation for the next iteration\\
+	}
+}
+\textbf{return} optimized parameter vector, function value and some additional informations \\
+\caption{Pseudocode of the modified Simulated Annealing method in the \textbf{optimization} package exemplary for a minimization.}
+\label{algorithm:pseudocode}
+\end{algorithm}
+
+The inner loop of Algorithm \ref{algorithm:pseudocode} is a Markov-Chain in which the responses of different covariate combinations are calculated and compared. The loop is repeated $n_{inner}$ times. After saving the covariate combination of the last inner iteration as $x_j$, the variation function is called to create a new temporary combination $x_{i*}$. In the classical SA approach, the covariates are changed by a uniform distributed random number around $x_j$ \citep{kirkpatrick_1983} which is also the default in our function. The variation function can be changed by the user. It is allowed to depend on a vector with random factors $rf$, $x_j$ and the temperature $t$. By default, the entries in $rf$ determine the lower and upper limit of the uniformly distributed random number relative to the current expression of the covariate. A random factor of 0.1 and a covariate expression of 3 for $x_j$ e.g. leads to a random number between 2.7 and 3.3 for $x_i*$ if the covariate vector has one entry. If all entries in $x_{i*}$ after their variation are within the allowed boundaries, the response is calculated. Otherwise the invalid entries of $x_{i*}$ are drawn again until all entries are valid. According to \citet{corana_1987}, the number of invalid trials can be used for dynamical adjustment of the $rf$. The numbers of invalid trials are thus, distinctively for each covariate, counted and stored. If the return of current variables combination $f(x_{i*})$ is better than $f(x_j)$, $x_{i*}$ and $f(x_{i*})$ are stored. Main idea of the SA is to cope with local optima. For this, even if the return of $x_{i*}$ is worse than the return of $x_{j}$ there is a chance of keeping  $x_{i*}$. The former optimal covariate combination is stored before it is overwritten. The likelihood of keeping worse responses decreases with decreasing temperature $t$ thus with increasing number of outer loop iterations. The detailed calculation of the Monte-Carlo approach by \citet{metropolis_1953} can i.a. be found in \citet{kirkpatrick_1983}. Storing the development of covariates and response can be help improving the performance of SA \citep{lin_1995, hansen_2012}. We implemented a modification of the threshold accepting strategy \citep{dueck_1990} which enables reducing the total number of calculations. This is archived by simply calculating and storing the improvement as absolute difference of $f(x_{i})$ and $f(x_j)$. If the response oscillates for user defined number of repetitions within a user defined threshold, the inner loop breaks.\\
+
+Main functions of the outer loop are calling the inner loop as well as specifying $t$ and $vf$ for the next iteration of the outer loop. As $t$ obligatory decreases in our derivation of SA, the number of iterations is implicitly user-prespecified by initial temperature $t_0$ and minimum temperature $t_{min}$. $t$ is necessary for the stochastic part within the inner loop \citep{kirkpatrick_1983}. As each covariate can have its own random factor, the vector with random factors $rf$ is of the same dimension as $x_i$. Dividing the counted number of invalid trials of a covariate by the total number of trials of the respective covariate gives the ratio of invalid trials distinctively for each covariate. Summing up the valid and invalid trials of all inner loop repetitions gives the mean ratio of invalid trials per outer loop repetition. According to \citep{corana_1987}, this ratio can be used to find a trade-off between accuracy on the one and size of the search-domain on the other side. They suggest ratios between 0.4 and 0.6. If any observed ratio is < 0.4 or > 0.6, the respective random factors are modified following the suggested nonlinear equation by \citet{corana_1987} such that they are dynamically adjusted for the next iteration. \citet{pronzato_1984}, who developed the Adaptive Random Search method, propose a time decreasing search-domain. We combined the two methods by linearly shrinking the favorable range of ratios from 0.4-0.6 to 0.04-0.06. If the default variation function is chosen, the search-domain of the covariates reduces with increasing number of outer loop iterations.\\
+
+\textbf{May an additional graphical explanation be useful?}
+
+\section{The optimization package}
+\textbf{descriping all options, the most relevant more detailed, maybe with examples}
+The loss functions are not necessarily continuous but need to be bounded. It is theoretically allowed to be of high dimension.
+The variation function must be in form of an \textbf{R} function. Defaul is...
+\begin{example}
+	x <- 1:10
+	result <- myFunction(x)
+\end{example}
+... It is thus not useful to specify functions that do not depend on rf but nevertheless activate dyn rf
+
+\section{Practical examples}
+\subsection{Rosenbrock Function}
+Simple Integer Programming example.
+\subsection{SVAR}
+Alex
+\subsection{Forest Harvesting Schedule Optimization}
+\section{Summary and Discussion}
+It does not guarantee, of course, to find the global minimum, but if the function has many good near- optimal solutions, it should find one. In particular, this method is able to discriminate between “gross behavior” of the function and finer “wrinkles.” First, it reaches an area in the function domain where a global minimum should be present, following the gross behavior irrespectively of small local minima found on the way. It then develops finer details, finding a good, near-optimal local minimum, if not the global minimum itself.\\
 
 This section may contain a figure such as Figure~\ref{figure:rlogo}.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics{Fig/Rlogo}
-  \caption{The logo of R.}
-  \label{figure:rlogo}
-\end{figure}
-
-\section{Another section}
-
-There will likely be several sections, perhaps including code snippets, such as:
-
-\begin{example}
-  x <- 1:10
-  result <- myFunction(x)
-\end{example}
-
-\section{Summary}
 
 This file is only a basic article template. For full details of \emph{The R Journal} style and information on how to prepare your article for submission, see the \href{http://journal.r-project.org/share/author-guide.pdf}{Instructions for Authors}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics{Fig/Rlogo}
+	\caption{The logo of R.}
+	\label{figure:rlogo}
+\end{figure}
 
 \bibliography{husmann}
 

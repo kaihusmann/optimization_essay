@@ -1,32 +1,112 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Agostini et~al.(2006)Agostini, Soares-Pinto, Moret, Osthoff, and
+  Pascutti]{agostini_2006}
+F.~P. Agostini, D.~D.~O. Soares-Pinto, M.~A. Moret, C.~Osthoff, and P.~G.
+  Pascutti.
+\newblock Generalized simulated annealing applied to protein folding studies.
+\newblock \emph{Journal of computational chemistry}, 27\penalty0 (11):\penalty0
+  1142--1155, 2006.
+
+\bibitem[Baskent and Jordan(2002)]{baskent_2002}
+E.~Z. Baskent and G.~A. Jordan.
+\newblock Forest landscape management modeling using simulated annealing.
+\newblock \emph{Forest Ecology and Management}, 165\penalty0 (1):\penalty0
+  29--45, 2002.
+
+\bibitem[Blum and Roli(2003)]{blum_2003}
+C.~Blum and A.~Roli.
+\newblock Metaheuristics in combinatorial optimization: Overview and conceptual
+  comparison.
+\newblock \emph{ACM Computing Surveys (CSUR)}, 35\penalty0 (3):\penalty0
+  268--308, 2003.
+
+\bibitem[Clarke and Wright(1964)]{clarke_1964}
+G.~Clarke and J.~W. Wright.
+\newblock Scheduling of vehicles from a central depot to a number of delivery
+  points.
+\newblock \emph{Operations research}, 12\penalty0 (4):\penalty0 568--581, 1964.
+
 \bibitem[Corana et~al.(1987)Corana, Marchesi, Martini, and
-  Ridella]{Corana.1987}
+  Ridella]{corana_1987}
 A.~Corana, M.~Marchesi, C.~Martini, and S.~Ridella.
 \newblock Minimizing multimodal functions of continuous variables with the
   “simulated annealing” algorithm.
 \newblock \emph{ACM Trans. Math. Softw.}, 13\penalty0 (3):\penalty0 262--280,
   1987.
 
-\bibitem[Dantzig et~al.(1959)Dantzig, Fulkerson, and Johnson]{Dantzig.1959}
+\bibitem[Dantzig et~al.(1959)Dantzig, Fulkerson, and Johnson]{dantzig_1959}
 G.~B. Dantzig, D.~R. Fulkerson, and S.~M. Johnson.
 \newblock On a linear-programming, combinatorial approach to the
   traveling-salesman problem.
 \newblock \emph{Operations Research}, 7\penalty0 (1):\penalty0 58--66, 1959.
 
+\bibitem[DeSarbo et~al.(1989)DeSarbo, Oliver, and Rangaswamy]{desarbo_1989}
+W.~S. DeSarbo, R.~L. Oliver, and A.~Rangaswamy.
+\newblock A simulated annealing methodology for clusterwise linear regression.
+\newblock \emph{Psychometrika}, 54\penalty0 (4):\penalty0 707--736, 1989.
+
+\bibitem[Dueck and Scheuer(1990)]{dueck_1990}
+G.~Dueck and T.~Scheuer.
+\newblock Threshold accepting: a general purpose optimization algorithm
+  appearing superior to simulated annealing.
+\newblock \emph{Journal of computational physics}, 90\penalty0 (1):\penalty0
+  161--175, 1990.
+
+\bibitem[Geiger and Kanzow(1999)]{geiger_1999}
+C.~Geiger and C.~Kanzow.
+\newblock Das nelder-mead-verfahren.
+\newblock \emph{Numerische Verfahren zur L{\"o}sung unregestrierter
+  Optimierungsaufgaben}, 1999.
+
+\bibitem[Goffe et~al.(1996)]{goffe_1996}
+W.~L. Goffe et~al.
+\newblock Simann: A global optimization algorithm using simulated annealing.
+\newblock \emph{Studies in Nonlinear Dynamics and Econometrics}, 1\penalty0
+  (3):\penalty0 169--176, 1996.
+
+\bibitem[Hansen(2012)]{hansen_2012}
+J.~H. Hansen.
+\newblock \emph{Modellbasierte Entscheidungsunterstützung für den
+  Forstbetrieb: Optimierung kurzfristiger Nutzungsoptionen und mittelfristiger
+  Strategien unter Verwendung metaheuristischer Verfahren und parallelen
+  Rechnens}.
+\newblock Cuvillier, Göttingen, 1. aufl. edition, 2012.
+
+\bibitem[Ingber(1993)]{ingber_1993}
+L.~Ingber.
+\newblock Simulated annealing: Practice versus theory.
+\newblock \emph{Mathematical and computer modelling}, 18\penalty0
+  (11):\penalty0 29--57, 1993.
+
 \bibitem[Kirkpatrick et~al.(1983)Kirkpatrick, Gelatt, Vecchi,
-  et~al.]{Kirkpatrick.1983}
+  et~al.]{kirkpatrick_1983}
 S.~Kirkpatrick, C.~D. Gelatt, M.~P. Vecchi, et~al.
 \newblock Optimization by simulated annealing.
 \newblock \emph{science}, 220\penalty0 (4598):\penalty0 671--680, 1983.
 
+\bibitem[Lin et~al.(1995)Lin, Haley, and Sparks]{lin_1995}
+C.~Lin, K.~Haley, and C.~Sparks.
+\newblock A comparative study of both standard and adaptive versions of
+  threshold accepting and simulated annealing algorithms in three scheduling
+  problems.
+\newblock \emph{European Journal of Operational Research}, 83\penalty0
+  (2):\penalty0 330--346, 1995.
+
+\bibitem[Metropolis et~al.(1953)Metropolis, Rosenbluth, Rosenbluth, Teller, and
+  Teller]{metropolis_1953}
+N.~Metropolis, A.~W. Rosenbluth, M.~N. Rosenbluth, A.~H. Teller, and E.~Teller.
+\newblock Equation of state calculations by fast computing machines.
+\newblock \emph{The journal of chemical physics}, 21\penalty0 (6):\penalty0
+  1087--1092, 1953.
+
 \bibitem[Pronzato et~al.(1984)Pronzato, Walter, Venot, and
-  Lebruchec]{Pronzato.1984}
+  Lebruchec]{pronzato_1984}
 L.~Pronzato, E.~Walter, A.~Venot, and J.-F. Lebruchec.
 \newblock A general-purpose global optimizer: Implimentation and applications.
 \newblock \emph{Mathematics and Computers in Simulation}, 26\penalty0
@@ -34,10 +114,23 @@ L.~Pronzato, E.~Walter, A.~Venot, and J.-F. Lebruchec.
 \newblock ISSN 03784754.
 \newblock \doi{10.1016/0378-4754(84)90105-8}.
 
-\bibitem[Wegener(2005)]{Wegener.2005}
+\bibitem[Theussl and Borchers(2016)]{theussl_2016}
+S.~Theussl and H.~W. Borchers.
+\newblock {CRAN} {Task} {View}: {Optimization} and {Mathematical}
+  {Programming}.
+\newblock Oct. 2016.
+\newblock URL \url{https://CRAN.R-project.org/view=Optimization}.
+
+\bibitem[Wegener(2005)]{wegener_2005}
 I.~Wegener.
 \newblock Simulated annealing beats metropolis in combinatorial optimization.
 \newblock In \emph{International Colloquium on Automata, Languages, and
   Programming}, pages 589--601. Springer, 2005.
+
+\bibitem[Xiang et~al.(2013)Xiang, Gubian, Suomela, and Hoeng]{xiang_2013}
+Y.~Xiang, S.~Gubian, B.~Suomela, and J.~Hoeng.
+\newblock Generalized simulated annealing for global optimization: the gensa
+  package.
+\newblock \emph{The R Journal Volume 5(1):13-29, June 2013}, 2013.
 
 \end{thebibliography}
