@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  21 FEB 2017 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  27 FEB 2017 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1454,12 +1454,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 63.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 60.
 (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2014/06/22 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.18004pt on input line 63.
+(Font)              scaled to size 9.18004pt on input line 60.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1470,15 +1470,19 @@ Package microtype Info: Character `textendash ' is missing
 Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 62.
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+) [3]
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-[3] <Fig/Rlogo.png, id=175, 101.37875pt x 77.28876pt>
+<Fig/Rlogo.png, id=178, 101.37875pt x 77.28876pt>
 File: Fig/Rlogo.png Graphic file (type png)
  <use Fig/Rlogo.png>
-Package pdftex.def Info: Fig/Rlogo.png used on input line 85.
+Package pdftex.def Info: Fig/Rlogo.png used on input line 89.
 (pdftex.def)             Requested size: 101.3785pt x 77.28856pt.
 
 (./RJwrapper.bbl (./RJwrapper.brf)
@@ -1492,7 +1496,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 24.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 24.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 24.
 Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
-(rerunfilecheck)             Checksum: 1EA31C9D7DA3C1A9F6C661D6BB7959C2;639.
+(rerunfilecheck)             Checksum: 5505E9B2B9FBCCC3369D52D553B588B8;639.
 Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
 (rerunfilecheck)             Checksum: EC6C23FC89A78FC8944C405AA16F2FBB;1938.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 24.
@@ -1502,13 +1506,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 24.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 22770 strings out of 494860
- 403541 string characters out of 6177603
+ 22820 strings out of 494860
+ 404185 string characters out of 6177603
  517363 words of memory out of 5000000
- 25418 multiletter control sequences out of 15000+600000
- 40382 words of font info for 175 fonts, out of 8000000 for 9000
+ 25442 multiletter control sequences out of 15000+600000
+ 43539 words of font info for 190 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,20n,56p,2768b,2445s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,20n,56p,2768b,2437s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t
 1-0.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
 texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/sh
@@ -1517,11 +1521,12 @@ xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pala
-tino/uplri8a.pfb>
-Output written on RJwrapper.pdf (5 pages, 146409 bytes).
+tino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a
+.pfb>
+Output written on RJwrapper.pdf (5 pages, 158410 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
+ 260 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
  39 named destinations out of 1000 (max. 500000)
- 30298 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 34906 words of extra memory for PDF output out of 35830 (max. 10000000)
 
