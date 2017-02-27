@@ -1,9 +1,10 @@
 \BOOKMARK [0][-]{section*.1}{Multi-Purpose Global Optimization by flexible Simulated-Annealing}{}% 1
 \BOOKMARK [1][-]{section.2.1}{Introduction}{section*.1}% 2
 \BOOKMARK [1][-]{section.2.2}{Method}{section*.1}% 3
-\BOOKMARK [1][-]{section.2.3}{The function optim\137sa}{section*.1}% 4
-\BOOKMARK [1][-]{section.2.4}{Practical examples}{section*.1}% 5
-\BOOKMARK [2][-]{subsection.2.4.1}{Rosenbrock Function}{section.2.4}% 6
-\BOOKMARK [2][-]{subsection.2.4.2}{SVAR}{section.2.4}% 7
-\BOOKMARK [2][-]{subsection.2.4.3}{Forest harvesting schedule optimization}{section.2.4}% 8
-\BOOKMARK [1][-]{section.2.5}{Summary and discussion}{section*.1}% 9
+\BOOKMARK [1][-]{section.2.3}{The package optimization}{section*.1}% 4
+\BOOKMARK [2][-]{subsection.2.3.1}{The function optim\137sa}{section.2.3}% 5
+\BOOKMARK [1][-]{section.2.4}{Practical examples}{section*.1}% 6
+\BOOKMARK [2][-]{subsection.2.4.1}{Rosenbrock Function}{section.2.4}% 7
+\BOOKMARK [2][-]{subsection.2.4.2}{SVAR}{section.2.4}% 8
+\BOOKMARK [2][-]{subsection.2.4.3}{Forest harvesting schedule optimization}{section.2.4}% 9
+\BOOKMARK [1][-]{section.2.5}{Summary and discussion}{section*.1}% 10
