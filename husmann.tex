@@ -76,9 +76,9 @@ All parameters in the list with \code{control} arguments have a default value. T
 	\item \code{t0}: Initial temperature. Default is 1000. The temperature directly influences the likelihood of accepting worse responses thus the stochastic part of the optimization. \code{t0} should be adopted to the loss function complexity. Higher temperatures lead to higher ability of coping with local optima on the one but also to more time-consuming function calls on the other hand.
 	\item \code{t\_min}: Numeric value that determines the temperature where outer loop stops. Default is 0.1. As there is approximately no chance of leaving local optima in iterations with low temperature \code{t\_min} mainly affects accuracy of the solution. Higher \code{t\_min} yields to lower accuracy and less function calls.
 	\item \code{nlimit}: Integer value which determines the maximum number of inner loops iterations. Default is 100. If the break criterion \code{stopac} is not fulfilled, \code{nlimit} is the exact number of inner loops repetitions.
-	\item \code{r}: Numeric value that determines the reduction of the temperature at the end of the outer loop. Slower temperature reduction leads to increasing number of function calls. It should be parameterized with respect to \code{nlimit}. High \code{nlimit} in combination with low \code{r} lead to many iterations with the same acceptance likelihood of worse solutions. Low \code{nlimit} in combination with \code{r} near 1, by contrast, lead to continuously decreasing acceptance likelihood of worse solutions.
-	\item \code{k}:
-	
+	\item \code{r}: Numeric value that determines the reduction of the temperature at the end of the outer loop. Slower temperature reduction leads to increasing number of function calls. It should be parameterized with respect to \code{nlimit}. High \code{nlimit} in combination with low \code{r} lead to many iterations with the same acceptance likelihood of worse responses. Low \code{nlimit} in combination with \code{r} near 1, by contrast, lead to continuously decreasing acceptance likelihood of worse responses.
+	\item \code{k}: Numeric value. Constant for the Metropolis function \citep{kirkpatrick_1983}. Default is 1. \code{k} determines the global, non-dynamic likelihood of accepting worse responses. The higher \code{k} the higher the likelihood of accepting worse responses.
+	stopac, ac\_acc
 \end{itemize}
 
 

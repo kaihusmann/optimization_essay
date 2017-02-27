@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  27 FEB 2017 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  27 FEB 2017 19:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1479,7 +1479,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
 
-<Fig/Rlogo.png, id=195, 101.37875pt x 77.28876pt>
+<Fig/Rlogo.png, id=197, 101.37875pt x 77.28876pt>
 File: Fig/Rlogo.png Graphic file (type png)
  <use Fig/Rlogo.png>
 Package pdftex.def Info: Fig/Rlogo.png used on input line 107.
@@ -1498,7 +1498,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 24.
 Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
 (rerunfilecheck)             Checksum: 65B15BF68DBEAE386A284D04947610BD;717.
 Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
-(rerunfilecheck)             Checksum: 1DD82B468310BFF28779D955FF807C96;2158.
+(rerunfilecheck)             Checksum: D5DFCA5DDF2E82F7F4AEDD04F7198A2C;2217.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 24.
  )
 (\end occurred inside a group at level 1)
@@ -1523,10 +1523,10 @@ ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pala
 tino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a
 .pfb>
-Output written on RJwrapper.pdf (6 pages, 165155 bytes).
+Output written on RJwrapper.pdf (6 pages, 165474 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 259 compressed objects within 3 object streams
+ 282 PDF objects out of 1000 (max. 8388607)
+ 262 compressed objects within 3 object streams
  41 named destinations out of 1000 (max. 500000)
  34914 words of extra memory for PDF output out of 35830 (max. 10000000)
 
