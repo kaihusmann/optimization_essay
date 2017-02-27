@@ -58,9 +58,9 @@ Main functions of the outer loop are calling the inner loop as well as specifyin
 
 \section{The package optimization}
 \subsection{The function optim\_sa}
-As \code{optim\_sa} shall be able to solve very specific optimization problems, several parameters can be defined by the user. Quality of solution and speed of convergence will thus substantially depend on accurate parametrization. In the following, we will explain each parameter briefly giving hints for useful specification.
+As the function is mainly written in C++, it requires \CRANpkg{Rcpp}. \code{optim\_sa} shall be able to solve very specific optimization problems, several parameters can be defined by the user. Quality of solution and speed of convergence will thus substantially depend on accurate parametrization. In the following, we will explain each parameter briefly giving hints for useful specification.
 \begin{itemize}
-	\item \code{fun}: Loss function to be optimized. The function must depend on a vector of covariates and return one numeric value. There are no assumptions on covariates and return. They are not necessarily continuous. Missing (\code{NA}) or undefined (\code{NaN}) returns are allowed as well.
+	\item \code{fun}: Loss function to be optimized. The function must depend on a vector of covariates and return one numeric value. There are no assumptions on covariates and return. They are not necessarily continuous. Missing (\code{NA}) or undefined (\code{NaN}) returns are allowed as well. Any restriction on the parameter space, e. g. specific invalid covariate values within the boundaries, can be integrated in the loss function directly by simply returning NA. Restrictions on the state space can be defined analogously. We will be more specific on this in the practical example.
 	\item \code{start}: Obligatory numeric vector with initial covariate combination. It must be ensured that at least one covariate combination leads to a defined numeric response. The loss function response at the start variables combination must therefore be a defined numeric value. This might be relevant when the starting values are determined stochastically.
 	\item \code{maximization}: Logical value with default \code{FALSE} which indicates whether the loss function is to be maximized or minimized.
 	\item \code{trace}: Logical value with default \code{FALSE}. If \code{TRUE}, the last inner loop iteration of each outer loop iteration is stored as row in the trace matrix. This might help evaluating the solutions quality. However, storing interim results increases calculation time up to 10 \%. Disabling \code{trace} can thus improve efficiency when the convergence of an optimization problem is known to be stable.
@@ -70,16 +70,23 @@ As \code{optim\_sa} shall be able to solve very specific optimization problems, 
 \end{itemize}
 All parameters in the list with \code{control} arguments have a default value. They are pre-parameterized for loss functions of medium complexity. \code{control} arguments are:
 \begin{itemize}
-	\item \code{vf}: Function that determines the variation of covariates during the iterations. It is allowed to depend on \code{rf}, \code{temperature} and a vector of covariates of the last iteration.
+	\item \code{vf}: Function that determines the variation of covariates during the iterations. It is allowed to depend on \code{rf}, \code{temperature} and a vector of covariates of the current iteration. The variation function is a crucial element of \code{optim\_sa} which enables flexible programming. It is (next to the loss function itself) the second possibility to define restrictions. The parameter space of the optimization program can be defined \code{vf}. Per default, the covariates are changed by a continuous, uniform distributed random number. It must be considered that defining specific \code{rf} can increase the calculation time. The default \code{rf} is a compiled C++ function whereas user specified \code{rf} must be defined as R functions. User specified are e. g. useful for optimization problems with non-continuous parameter space.
+	\item \code{rf}: Numeric vector with random factors. The random factors determine the range of the random number in the variation function vf relative to the dimension of the function variables. The rf can be stated separately for each variable. Default is a vector of ones. If \code{dyn\_rf} is enabled, the entries in \code{rf} change dynamically over time.
+	\item \code{dyn\_rf}: Logical. Default is \code{TRUE} \code{rf} change dynamically over time to ensure increasing precision with increasing number of iterations. Default is \code{TRUE}. \code{dyn\_rf} ensures a relatively wide search domain at the beginning of the optimization process that shrinks over time \citep{corana_1987, pronzato_1984}. Disabling \code{dyn\_rf} can be useful when \code{rf} with high performance are known. The development of \code{rf} is documented in the \code{trace} matrix. Evaluation of former optimizations with dynamic \code{rf} can thus help finding reasonable fixed \code{rf}. Self-specified \code{vf} may not depend on \code{rf}. In this cases activating \code{dyn\_rf} makes no sense.
+	\item \code{t0}: Initial temperature. Default is 1000. The temperature directly influences the likelihood of accepting worse responses thus the stochastic part of the optimization. \code{t0} should be adopted to the loss function complexity. Higher temperatures lead to higher ability of coping with local optima on the one but also to more time-consuming function calls on the other hand.
+	\item \code{t\_min}: Numeric value that determines the temperature where outer loop stops. Default is 0.1. As there is approximately no chance of leaving local optima in iterations with low temperature \code{t\_min} mainly affects accuracy of the solution. Higher \code{t\_min} yields to lower accuracy and less function calls.
+	\item \code{nlimit}: Integer value which determines the maximum number of inner loops iterations. Default is 100. If the break criterion \code{stopac} is not fulfilled, \code{nlimit} is the exact number of inner loops repetitions.
+	\item \code{r}: Numeric value that determines the reduction of the temperature at the end of the outer loop. Slower temperature reduction leads to increasing number of function calls. It should be parameterized with respect to \code{nlimit}. High \code{nlimit} in combination with low \code{r} lead to many iterations with the same acceptance likelihood of worse solutions. Low \code{nlimit} in combination with \code{r} near 1, by contrast, lead to continuously decreasing acceptance likelihood of worse solutions.
+	\item \code{k}:
+	
 \end{itemize}
 
 
-The variation function must be in form of an \textbf{R} function. Defaul is...
+
 \begin{example}
 	x <- 1:10
 	result <- myFunction(x)
 \end{example}
-... It is thus not useful to specify functions that do not depend on rf but nevertheless activate dyn rf
 
 \section{Practical examples}
 \subsection{Rosenbrock Function}

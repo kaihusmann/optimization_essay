@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  27 FEB 2017 16:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  27 FEB 2017 19:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1474,32 +1474,31 @@ LaTeX Font Info:    Try loading font information for TS1+ppl on input line 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-) [3]
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+) [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
 
-<Fig/Rlogo.png, id=186, 101.37875pt x 77.28876pt>
+<Fig/Rlogo.png, id=195, 101.37875pt x 77.28876pt>
 File: Fig/Rlogo.png Graphic file (type png)
  <use Fig/Rlogo.png>
-Package pdftex.def Info: Fig/Rlogo.png used on input line 100.
+Package pdftex.def Info: Fig/Rlogo.png used on input line 107.
 (pdftex.def)             Requested size: 101.3785pt x 77.28856pt.
 
 (./RJwrapper.bbl (./RJwrapper.brf)
 \tf@brf=\write6
 \openout6 = `RJwrapper.brf'.
 
- [4 <./Fig/Rlogo.png>])) [5] [6]
+ [5 <./Fig/Rlogo.png>])) [6]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 24.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 24.
-
-(./RJwrapper.aux)
+ (./RJwrapper.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 24.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 24.
 Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
 (rerunfilecheck)             Checksum: 65B15BF68DBEAE386A284D04947610BD;717.
 Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
-(rerunfilecheck)             Checksum: 3FE33618F3B656272EB58044AAF0D6EE;2048.
+(rerunfilecheck)             Checksum: 1DD82B468310BFF28779D955FF807C96;2158.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 24.
  )
 (\end occurred inside a group at level 1)
@@ -1507,13 +1506,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 24.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 22829 strings out of 494860
- 404276 string characters out of 6177603
+ 22832 strings out of 494860
+ 404303 string characters out of 6177603
  517366 words of memory out of 5000000
  25443 multiletter control sequences out of 15000+600000
- 43857 words of font info for 194 fonts, out of 8000000 for 9000
+ 44016 words of font info for 196 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,20n,56p,2768b,2427s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,20n,56p,2768b,2447s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t
 1-0.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
 texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/sh
@@ -1524,10 +1523,10 @@ ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pala
 tino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a
 .pfb>
-Output written on RJwrapper.pdf (6 pages, 161525 bytes).
+Output written on RJwrapper.pdf (6 pages, 165155 bytes).
 PDF statistics:
- 274 PDF objects out of 1000 (max. 8388607)
- 254 compressed objects within 3 object streams
+ 279 PDF objects out of 1000 (max. 8388607)
+ 259 compressed objects within 3 object streams
  41 named destinations out of 1000 (max. 500000)
  34914 words of extra memory for PDF output out of 35830 (max. 10000000)
 
