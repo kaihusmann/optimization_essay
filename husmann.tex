@@ -57,6 +57,7 @@ Main functions of the outer loop are calling the inner loop as well as specifyin
 \textbf{May an additional graphical explanation be useful?}
 
 \section{The package optimization}
+
 \subsection{The function optim\_sa}
 As the function is mainly written in C++, it requires \CRANpkg{Rcpp}. \code{optim\_sa} shall be able to solve very specific optimization problems, several parameters can be defined by the user. Quality of solution and speed of convergence will thus substantially depend on accurate parametrization. In the following, we will explain each parameter briefly giving hints for useful specification.
 \begin{itemize}
@@ -78,19 +79,49 @@ All parameters in the list with \code{control} arguments have a default value. T
 	\item \code{nlimit}: Integer value which determines the maximum number of inner loops iterations. Default is 100. If the break criterion \code{stopac} is not fulfilled, \code{nlimit} is the exact number of inner loops repetitions.
 	\item \code{r}: Numeric value that determines the reduction of the temperature at the end of the outer loop. Slower temperature reduction leads to increasing number of function calls. It should be parameterized with respect to \code{nlimit}. High \code{nlimit} in combination with low \code{r} lead to many iterations with the same acceptance likelihood of worse responses. Low \code{nlimit} in combination with \code{r} near 1, by contrast, lead to continuously decreasing acceptance likelihood of worse responses.
 	\item \code{k}: Numeric value. Constant for the Metropolis function \citep{kirkpatrick_1983}. Default is 1. \code{k} determines the global, non-dynamic likelihood of accepting worse responses. The higher \code{k} the higher the likelihood of accepting worse responses.
-	stopac, ac\_acc
+	\item \code{stopac}: Number of repetitions when the threshold accepting criterion is fulfilled. Can break the inner but not the outer loop.
+	\item \code{ac\_acc}: Respective accuracy for the threshold accepting criterion in relation to the response. Very useful for optimization problems without high requirements on accuracy. Lower accuracy can speed-up the solution substantially.
 \end{itemize}
 
+\section{Practical examples}
+We briefly explain where the \code{optim\_sa} function might be advantageous at 3 examples with different complexity.
+\subsection{Himmelblau Function}
+We chose Himmelblau's function \citep{himmelblau_1972} as initial example because it is a very simple multimodal equation which is widely known in Operations Research which has with 4 equal minimum values. It helps explaining the basic behavior of the \code{optim\_sa} function. 
 
+\begin{equation}
+f(x_1,x_2)=(x_1^2+x_2-11)^2+(x_1+x_2^2-7)^2
+\end{equation}
+
+We performed 10,000 optimizations with different packages in order investigate quality and speed. As the problem could be solved with relatively simple direct search methods we also included the Nelder-Mead (NM) optimization method \citep{nelder_1965} which is the default of \code{optim} from the \CRANpkg{stats} package. We parameterized the \code{optim\_sa} function for relatively simple optimization problems. We defined the problem to be sufficiently solved when the response after minimization is < 0.01. We tried to find parameters for all other investigated functions which fulfill the sufficiency definition. We performed optimizations with \CRANpkg{GenSA} and \CRANpkg{stats} having the following parameters:
 
 \begin{example}
-	x <- 1:10
-	result <- myFunction(x)
+# Package stats (NM)
+optim(fn = hi, par = c(10, 10), method = "Nelder-Mead")
+
+# Package optimization
+optim_sa(fun = hi, start = (c(10, 10)), trace = TRUE, 
+	lower = c(-40, -40), upper=c(40, 40),
+		control = list(t0 = 500, nlimit = 150,r = 0.8,
+		rf = 3, ac_acc = 0.1, dyn_rf = TRUE
+		)
+	)
+
+# Package stats (SA)
+optim(fn = hi, par = c(10, 10), method = "SANN",
+	control = list(tmax = 500, reltol = 0.1, temp = 50, trace = TRUE
+		)
+	)
+
+# Package GenSA
+GenSA( fn = hi, par = c(10, 10), lower = c(-40, -40), upper = c(40, 40), 
+	control = list(temperature = 500, nb.stop.improvement = 30, maxit = 3900)
+	)
 \end{example}
 
-\section{Practical examples}
-\subsection{Rosenbrock Function}
-Simple Integer Programming example. Visual plot inspection.
+It can be seen that parameterization of NM is, as expected, considerable more easy. The function only needs starting values. With view to \textit{accuracy} each methods performed well. In mean of 10,000 calls all functions returned responses < 0.01 after minimization. Thus all functions are able to solve the problem. Since we have a multimoda problem,
+After checking this necessary condition, we checked the efficiency.
+
+\section{A complexer function?}
 \subsection{SVAR}
 Alex
 \subsection{Forest harvesting schedule optimization}
