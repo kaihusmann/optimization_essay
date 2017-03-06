@@ -84,15 +84,16 @@ All parameters in the list with \code{control} arguments have a default value. T
 \end{itemize}
 
 \section{Practical examples}
-We briefly explain where the \code{optim\_sa} function might be advantageous at 3 examples with different complexity.
-\subsection{Himmelblau Function}
+We briefly explain where the \code{optim\_sa} function might be advantageous at 4 differing in their complexity.
+
+\subsection{Himmelblau Function with continuous parameter space}
 We chose Himmelblau's function \citep{himmelblau_1972} as initial example because it is a very simple multimodal equation which is widely known in Operations Research which has with 4 equal minimum values. It helps explaining the basic behavior of the \code{optim\_sa} function. 
 
 \begin{equation}
 f(x_1,x_2)=(x_1^2+x_2-11)^2+(x_1+x_2^2-7)^2
 \end{equation}
 
-We performed 10,000 optimizations with different packages in order investigate quality and speed. As the problem could be solved with relatively simple direct search methods we also included the Nelder-Mead (NM) optimization method \citep{nelder_1965} which is the default of \code{optim} from the \CRANpkg{stats} package. We parameterized the \code{optim\_sa} function for relatively simple optimization problems. We defined the problem to be sufficiently solved when the response after minimization is < 0.01. We tried to find parameters for all other investigated functions which fulfill the sufficiency definition. We performed optimizations with \CRANpkg{GenSA} and \CRANpkg{stats} having the following parameters:
+We performed 10,000 optimizations with different packages in order investigate quality and speed. As the problem could be solved with relatively simple direct search methods we also included the Nelder-Mead (NM) optimization method \citep{nelder_1965} which is the default of \code{optim} from the \CRANpkg{stats} package. We parameterized the \code{optim\_sa} function for relatively simple optimization problems. We tried to find parameters for all other investigated functions such the problem was solved properly. We performed optimizations with \CRANpkg{GenSA} and \CRANpkg{stats} having the following parameters:
 
 \begin{example}
 # Package stats (NM)
@@ -116,10 +117,11 @@ optim(fn = hi, par = c(10, 10), method = "SANN",
 GenSA( fn = hi, par = c(10, 10), lower = c(-40, -40), upper = c(40, 40), 
 	control = list(temperature = 500, nb.stop.improvement = 30, maxit = 3900)
 	)
-\end{example}
-Since we have a multimoda problem, we must have a closer look at the solutions. Although the starting parameter combination were fixed, the methods should be able to find each possible solution with similarlfrequency. We define this propertiy, in combination with the sufficient accuracy of the solution, as necessary condition. After checking this condition, we investigated the efficiency by comparing calculation times using \CRANpkg{microbenchmark}.
+\end{example} 
+%%Dont forget: No line break
+Since we have a multimodal optimization problem, we must evaluate response as well as covariate combinations to rate algorithms quality. Although the starting parameter combination were fixed, the methods should be able to find all possible 4 solution with similar frequency. We defined the problem to be solved with sufficient accuracy when the response was < 0.01 after minimization. We also looked at the frequency distribution of the covariate combination. After investigation of quality, we also compared the efficiencies by measuring calculation times with \CRANpkg{microbenchmark}.
 
-It could be seen that NM is quite easy to use. The function only needs starting values. All other functions needed much more settings. With view to \textit{accuracy} each method performed well. All functions were parameterized such that they returned in mean of 10,000 calls responses < 0.01 after the minimization process. All functions were thus able to find a solution. With view to freqency distribution the function performed indifferent ()
+It could be seen that parameterization of NM is quite easy. It only needs a vector with starting values. The other functions needed much more settings. With view to accuracy each method performed well. All functions returned in mean of 10,000 calls responses < 0.01 using the displayed parameters. All functions were thus generally able to find a proper solution. With view to frequency distribution the functions performed indifferent ()
 
 
 

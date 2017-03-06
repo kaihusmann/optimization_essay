@@ -2,7 +2,7 @@
 #### Example Himmelblau, cont. parameter space ####
 #-------------------------------------------------#
 
-library(GanSA)
+library(GenSA)
 library(optimization)
 library(ggplot2)
 # Himmelblau's function
