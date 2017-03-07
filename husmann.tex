@@ -52,7 +52,7 @@ Simulated Annealing and its derivations are well document in the scientific lite
 
 The inner loop of Algorithm \ref{algorithm:pseudocode} is a Markov-Chain in which the responses of different covariate combinations are calculated and compared. The loop is repeated $n_{inner}$ times. After saving the covariate combination of the last inner iteration as $x_j$, the variation function is called to create a new temporary combination $x_{i*}$. In the classical SA approach, the covariates are changed by a uniform distributed random number around $x_j$ \citep{kirkpatrick_1983} which is also the default in our function. The variation function can be changed by the user. It is allowed to depend on a vector with random factors $rf$, $x_j$ and the temperature $t$. By default, the entries in $rf$ determine the lower and upper limit of the uniformly distributed random number relative to the current expression of the covariate. A random factor of 0.1 and a covariate expression of 3 for $x_j$ e.g. leads to a random number between 2.7 and 3.3 for $x_i*$ if the covariate vector has one entry. If all entries in $x_{i*}$ after their variation are within the allowed boundaries, the response is calculated. Otherwise the invalid entries of $x_{i*}$ are drawn again until all entries are valid. According to \citet{corana_1987}, the number of invalid trials can be used for dynamical adjustment of the $rf$. The numbers of invalid trials are thus, distinctively for each covariate, counted and stored. If the return of current variables combination $f(x_{i*})$ is better than $f(x_j)$, $x_{i*}$ and $f(x_{i*})$ are stored. Main idea of the SA is to cope with local optima. For this, even if the return of $x_{i*}$ is worse than the return of $x_{j}$ there is a chance of keeping  $x_{i*}$. The former optimal covariate combination is stored before it is overwritten. The likelihood of keeping worse responses decreases with decreasing temperature $t$ thus with increasing number of outer loop iterations. The detailed calculation of the Monte-Carlo approach by \citet{metropolis_1953} can i.a. be found in \citet{kirkpatrick_1983}. Storing the development of covariates and response can be help improving the performance of SA \citep{lin_1995, hansen_2012}. We implemented a modification of the threshold accepting strategy \citep{dueck_1990} which enables reducing the total number of calculations. This is archived by simply calculating and storing the improvement as absolute difference of $f(x_{i})$ and $f(x_j)$. If the response oscillates for user defined number of repetitions within a user defined threshold, the inner loop breaks.
 
-Main functions of the outer loop are calling the inner loop as well as specifying $t$ and $vf$ for the next iteration of the outer loop. As $t$ obligatory decreases in our derivation of SA, the number of iterations is implicitly user-prespecified by initial temperature $t_0$ and minimum temperature $t_{min}$. $t$ is necessary for the stochastic part within the inner loop \citep{kirkpatrick_1983}. As each covariate can have its own random factor, the vector with random factors $rf$ is of the same dimension as $x_i$. Dividing the counted number of invalid trials of a covariate by the total number of trials of the respective covariate gives the ratio of invalid trials distinctively for each covariate. Summing up the valid and invalid trials of all inner loop repetitions gives the mean ratio of invalid trials per outer loop repetition. According to \citep{corana_1987}, this ratio can be used to find a trade-off between accuracy on the one and size of the search-domain on the other side. They argument that if there were only valid covariate combinations, the search domain could be too small for multimodal function. They suggest ratios between 0.4 and 0.6. If any observed ratio is < 0.4 or > 0.6, the respective random factors are modified following the suggested nonlinear equation by \citet{corana_1987} such that they are dynamically adjusted for the next iteration. \citet{pronzato_1984}, who developed the Adaptive Random Search method, propose a time decreasing search-domain. We combined the two methods by linearly shrinking the favorable range of ratios from 0.4-0.6 to 0.04-0.06. If the default variation function is chosen, the search-domain of the covariates reduces with increasing number of outer loop iterations.
+Main functions of the outer loop are calling the inner loop as well as specifying $t$ and $vf$ for the next iteration of the outer loop. As $t$ obligatory decreases in our derivation of SA, the number of iterations is implicitly user predefined by initial temperature $t_0$ and minimum temperature $t_{min}$. $t$ is necessary for the stochastic part within the inner loop \citep{kirkpatrick_1983}. As each covariate can have its own random factor, the vector with random factors $rf$ is of the same dimension as $x_i$. Dividing the counted number of invalid trials of a covariate by the total number of trials of the respective covariate gives the ratio of invalid trials distinctively for each covariate. Summing up the valid and invalid trials of all inner loop repetitions gives the mean ratio of invalid trials per outer loop repetition. According to \citep{corana_1987}, this ratio can be used to find a trade-off between accuracy on the one and size of the search-domain on the other side. They argument that if there were only valid covariate combinations, the search domain could be too small for multimodal function. They suggest ratios between 0.4 and 0.6. If any observed ratio is < 0.4 or > 0.6, the respective random factors are modified following the suggested nonlinear equation by \citet{corana_1987} such that they are dynamically adjusted for the next iteration. \citet{pronzato_1984}, who developed the Adaptive Random Search method, propose a time decreasing search domain. We combined the two methods by linearly shrinking the favorable range of ratios from 0.4-0.6 to 0.04-0.06. If the default variation function is chosen, the search domain of the covariates reduces with increasing number of outer loop iterations.
 
 \textbf{May an additional graphical explanation be useful?}
 
@@ -96,32 +96,59 @@ f(x_1,x_2)=(x_1^2+x_2-11)^2+(x_1+x_2^2-7)^2
 We performed 10,000 optimizations with different packages in order investigate quality and speed. As the problem could be solved with relatively simple direct search methods we also included the Nelder-Mead (NM) optimization method \citep{nelder_1965} which is the default of \code{optim} from the \CRANpkg{stats} package. We parameterized the \code{optim\_sa} function for relatively simple optimization problems. We tried to find parameters for all other investigated functions such the problem was solved properly. We performed optimizations with \CRANpkg{GenSA} and \CRANpkg{stats} having the following parameters:
 
 \begin{example}
-# Package stats (NM)
-optim(fn = hi, par = c(10, 10), method = "Nelder-Mead")
-
-# Package optimization
+# optim_sa
 optim_sa(fun = hi, start = (c(10, 10)), trace = TRUE, 
 	lower = c(-40, -40), upper=c(40, 40),
-		control = list(t0 = 500, nlimit = 150,r = 0.8,
+		control = list(t0 = 500, nlimit = 50,r = 0.85,
 		rf = 3, ac_acc = 0.1, dyn_rf = TRUE
 		)
 	)
 
-# Package stats (SA)
+# optim (SA)
 optim(fn = hi, par = c(10, 10), method = "SANN",
 	control = list(tmax = 500, reltol = 0.1, temp = 50, trace = TRUE
 		)
 	)
 
-# Package GenSA
-GenSA( fn = hi, par = c(10, 10), lower = c(-40, -40), upper = c(40, 40), 
-	control = list(temperature = 500, nb.stop.improvement = 30, maxit = 3900)
+# GenSA
+GenSA(fn = hi, par = c(10, 10), lower = c(-40, -40), upper = c(40, 40), 
+	control = list(temperature = 50, nb.stop.improvement = 30, maxit = 500)
 	)
-\end{example} 
+	
+# optim (NM)
+optim(fn = hi, par = c(10, 10), method = "Nelder-Mead")
+\end{example}
 %%Dont forget: No line break
-Since we have a multimodal optimization problem, we must evaluate response as well as covariate combinations to rate algorithms quality. Although the starting parameter combination were fixed, the methods should be able to find all possible 4 solution with similar frequency. We defined the problem to be solved with sufficient accuracy when the response was < 0.01 after minimization. We also looked at the frequency distribution of the covariate combination. After investigation of quality, we also compared the efficiencies by measuring calculation times with \CRANpkg{microbenchmark}.
+Since we have a multimodal optimization problem, we must evaluate response as well as covariate combinations to rate the quality of the algorithms. Although starting parameter combination are fixed, the methods should be able to find all possible 4 solution. We defined the problem to be solved with sufficient accuracy when the response was $\leq$ 0.01 after minimization. We also looked at the frequency distribution of the covariate combination. After investigation of quality, we also compared the efficiencies by measuring calculation times with \CRANpkg{microbenchmark}.
 
-It could be seen that parameterization of NM is quite easy. It only needs a vector with starting values. The other functions needed much more settings. With view to accuracy each method performed well. All functions returned in mean of 10,000 calls responses < 0.01 using the displayed parameters. All functions were thus generally able to find a proper solution. With view to frequency distribution the functions performed indifferent ()
+% latex table generated in R 3.2.3 by xtable 1.8-2 package - Modified after pasting
+% Tue Mar  7 14:26:30 2017
+\begin{table}[]
+	\centering
+	\caption{Relative frequencies of covariate combinations after optimization for the 4 examined methods. Number of repetitions: 10,000.}
+	\label{tab:tab1}
+	\begin{tabular}{cccccc}
+		\cline{3-6}
+		& \multicolumn{1}{c}{} & \multicolumn{4}{c}{Result (rounded)}                    \\ \cline{3-6} 
+		&                      & -2.8, 3.1 & 3.0, 2.0 & 3.6, -1.8 & -3.8, -3.3 \\ \cline{2-6} 
+		\multirow{4}{*}{Method} & optim\_sa          & 22.19     & 33.49    & 28.05     & 16.27      \\
+		& optim (SA)            & 25.91     & 30.89    & 24.08     & 19.12      \\
+		& GenSA              & 0.00      & 0.00     & 0.00      & 100.00     \\
+		& optim (NM)          & 0.00      & 0.00     & 0.00      & 100.00     \\ \cline{2-6} 
+	\end{tabular}
+\end{table}
+
+It could be seen that parameterization of NM is quite easy. It only needs a vector with starting values. The other functions needed much more settings. With view to accuracy each method performed well. All functions returned in mean of 10,000 calls responses $\leq$ 0.01 using the displayed parameters. All functions were thus generally able to find a proper solution. With view to frequency distribution the functions performed indifferent (Table \ref{tab:tab1}). \code{optim\_sa} and \code{optim (SA)} returned each 4 possible solutions. While the covariate combination \{-3.8, -3.3\} was consistently less frequent, all other solutions showed roughly similar frequencies. \code{GenSa} and \code{optim (NM)}, however, solely returned \{-3.8, -3.3\}. Further investigation revealed the solution to be sensitive of the starting values. If \code{GenSa} and \code{optim (NM)} were parameterized with randomly drawn starting values, all 4 results would have been possible. Advantage of \code{optim\_sa} as well a s \code{optim (SA)} against \code{GenSa} and \code{optim (NM)} is thus its independence from starting values. If an optimization problem has multiple equivalent solutions, \code{optim (SA)} is able to archive each possible solution. Practically, in case users are in doubt whether a problem has multiple solutions, the function can be repeated without re-parameterization. If well-specified, \code{optim\_sa} will return all possible solutions within the parameter space.
+
+As all functions are able to solve the problem, comparison of calculation times appears to be another quite important point
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{.7\linewidth}{!}{\input{test.tex}}
+	\caption{testtextime.}
+	\label{fig:fig1}
+\end{figure}
+
 
 
 
