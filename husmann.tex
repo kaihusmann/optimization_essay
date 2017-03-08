@@ -10,7 +10,7 @@ An abstract of less than 150 words.
 
 \section{Introduction}
 
-As early computer-based optimization methods developed contemporaneously with the first digital computers \citep{corana_1987}, nowadays numerous optimization methods for various purposes are available \citep{wegener_2005}. One of the main challenges in Operations Research is therefore to match the optimization problem with a reasonable method. According to  \citet{kirkpatrick_1983}, optimization procedures in general can be distinguished into exact methods and heuristics. In case the loss function of the optimization problem shows quite simple responses, exact methods are often meaningful tools of choice. If all assumptions on model loss and restrictions are met, these methods will obligatorily find the exact solution without need for further parameters. The  \textit{Linear Simplex-Method} \citep{dantzig_1959} as an example only needs the loss-function and optional restrictions as model input. If, however, any of the model assumptions, e. g. linearity or unimodality, is violated, exact methods are unable to solve the problems validly. In practice, they thus lack applicability whenever a loss function is too complex. With developing computer power heuristics like the Savings-Algorithm \citep{clarke_1964} and metaheuristics became more and more popular. Both enable solving optimization problems of more flexible loss functions. Metaheuristics are a generalization of heuristics with aim to be even more flexible and efficient \citep{blum_2003}. Depending on the method of choice, more or less assumptions on the loss function can be neglected. On the other hand heuristics and metaheuristics will always solve problems approximately. Precision of the solution depends on loss, optimization method and further parameterizations of the respective method. There is even no guaranty of approximating the actual optimum since the solution also depends, by contrast to exact methods, on parameterization \citep{blum_2003}. Heuristic and metaheuristic methods will thus always need additional parameters next to the loss function. Finding the proper model parameters is thus a crucial point when applying heuristic or metaheuristic algorithms. The complexity of parameterization will by trend increase with flexibility of the method. Direct search methods like the \textit{Nelder-Mead} (NM) algorithm are comparatively efficient methods which directly converge to the functions optimum and need relatively less settings \citep{geiger_1999}. Random search methods are able to cope with multimodal objective functions as they have a random component which allows leaving local optima. The efficiency and accuracy of such models is usually highly sensitive to their parameter specification \citep{corana_1987}.
+As early computer-based optimization methods developed contemporaneously with the first digital computers \citep{corana_1987}, nowadays numerous optimization methods for various purposes are available \citep{wegener_2005}. One of the main challenges in Operations Research is therefore to match the optimization problem with a reasonable method. According to  \citet{kirkpatrick_1983}, optimization procedures in general can be distinguished into exact methods and heuristics. In case the loss function of the optimization problem shows quite simple responses, exact methods are often meaningful tools of choice. If all assumptions on model loss and restrictions are met, these methods will obligatorily find the exact solution without need for further parameters. The  \textit{Linear Simplex-Method} \citep{dantzig_1959} as an example only needs the loss-function and optional restrictions as model input. If, however, any of the model assumptions, e. g. linearity or unimodality, is violated, exact methods are unable to solve the problems validly. In practice, they thus lack applicability whenever a loss function is too complex. With developing computer power heuristics like the Savings-Algorithm \citep{clarke_1964} and metaheuristics became more and more popular. Both enable solving optimization problems of more flexible loss functions. Metaheuristics are a generalization of heuristics with aim to be even more flexible and efficient \citep{blum_2003}. Depending on the method of choice, more or less assumptions on the loss function can be neglected. On the other hand heuristics and metaheuristics will always solve problems approximately. Precision of the solution depends on loss, optimization method and further parameterizations of the respective method. There is even no guaranty of approximating the actual optimum since the solution also depends, by contrast to exact methods, on parameterization \citep{blum_2003}. Heuristic and metaheuristic methods will thus always need additional parameters next to the loss function. Finding the proper model parameters is thus a crucial point when applying heuristic or metaheuristic algorithms. The complexity of parameterization will by trend increase with flexibility of the method while efficiency trends to decrease. Direct search methods like the \textit{Nelder-Mead} (NM) algorithm are comparatively efficient methods which directly converge to the functions optimum and need relatively less settings \citep{geiger_1999}. Random search methods are able to cope with multimodal objective functions as they have a random component which allows leaving local optima. The efficiency and accuracy of such models is usually highly sensitive to their parameter specification \citep{corana_1987}.
 
 \textit{Simulated Annealing} (SA) \citep{kirkpatrick_1983} is known to be one of the oldest and one of the most flexible and generalized metaheuristic method \citep{blum_2003}, though the term 'metaheuristic' was established after first publication of SA. It is known to be favorable against most other methods for multimodal loss functions with a very high number of covariates \citep{corana_1987}. The method was applied in many studies among several fields covering e. g. chemistry \citep{agostini_2006}, econometrics \citep{ingber_1993} or forest sciences \citep{baskent_2002}. Since its first implementation by \citet{kirkpatrick_1983}, many authors have modified the algorithm in order to adopt it for specific problems \citep[e. g.][]{desarbo_1989, goffe_1996} or make it more efficient \citep[e. g.][]{xiang_2013}. It is basically a combination of systematic and a stochastic components. The stochastic part of the algorithm allows keeping worse responses in each iteration step during the optimization process. This enables searching for the global optimum even for multimodal loss functions. As it offers a lot of options, SA can be named as hybrid method between a general optimizer (when default values are chosen) and a problem specific optimization program \citep{wegener_2005}. \citet{corana_1987} developed a dynamic adoption method for the variation of the stochastic component during the optimization process. Their modification affects the efficiency as well as the accuracy of the SA algorithm. It has potential to substantially improve the method. \citet{pronzato_1984} suggest to decrease the search-domain of the random component with increasing number of iterations. The stochastic component in general is the most sensitive part of the method since it actually determines the loss variables modification during the iterations.
 
@@ -61,26 +61,26 @@ Main functions of the outer loop are calling the inner loop as well as specifyin
 \subsection{The function optim\_sa}
 As the function is mainly written in C++, it requires \CRANpkg{Rcpp}. \code{optim\_sa} shall be able to solve very specific optimization problems, several parameters can be defined by the user. Quality of solution and speed of convergence will thus substantially depend on accurate parametrization. In the following, we will explain each parameter briefly giving hints for useful specification:
 \begin{itemize}
-	\item \code{fun}: Loss function to be optimized. The function must depend on a vector of covariates and return one numeric value. There are no assumptions on covariates and return. They are not necessarily continuous. Missing (\code{NA}) or undefined (\code{NaN}) returns are allowed as well. Any restriction on the parameter space, e. g. specific invalid covariate values within the boundaries, can be integrated in the loss function directly by simply returning NA. Restrictions on the state space can be defined analogously. We will be more specific on this in the practical examples.
-	\item \code{start}: Obligatory numeric vector with initial covariate combination. It must be ensured that at least the initial covariate combination leads to a defined numeric response. The loss function at the start variables combination must therefore return a defined numeric value. This might be relevant when the starting values are determined stochastically.
-	\item \code{maximization}: Logical value with default \code{FALSE} which indicates whether the loss function is to be maximized or minimized.
-	\item \code{trace}: Logical value with default \code{FALSE}. If \code{TRUE}, the last inner loop iteration of each outer loop iteration is stored as row in the trace matrix. This might help evaluating the solutions quality. However, storing interim results increases calculation time up to 10 \%. Disabling \code{trace} can thus improve efficiency when the convergence of an optimization problem is known to be stable.
-	\item \code{lower}: Numeric vector with lower boundaries of the covariates. The boundaries are obligatory since the dynamic \code{rf} adjustment \citep{corana_1987, pronzato_1984} depends on the number of invalid covariate combinations.
-	\item \code{upper}: Numeric vector with upper boundaries of the covariates.
-	\item \code{control}: A list with optional further parameters.
+	\item \code{fun}: loss function to be optimized. The function must depend on a vector of covariates and return one numeric value. There are no assumptions on covariates and return. They are not necessarily continuous. Missing (\code{NA}) or undefined (\code{NaN}) returns are allowed as well. Any restriction on the parameter space, e. g. specific invalid covariate values within the boundaries, can be integrated in the loss function directly by simply returning NA. Restrictions on the state space can be defined analogously. We will be more specific on this in the practical examples.
+	\item \code{start}: obligatory numeric vector with initial covariate combination. It must be ensured that at least the initial covariate combination leads to a defined numeric response. The loss function at the start variables combination must therefore return a defined numeric value. This might be relevant when the starting values are determined stochastically.
+	\item \code{maximization}: logical value with default \code{FALSE} which indicates whether the loss function is to be maximized or minimized.
+	\item \code{trace}: logical value with default \code{FALSE}. If \code{TRUE}, the last inner loop iteration of each outer loop iteration is stored as row in the trace matrix. This might help evaluating the solutions quality. However, storing interim results increases calculation time up to 10 \%. Disabling \code{trace} can thus improve efficiency when the convergence of an optimization problem is known to be stable.
+	\item \code{lower}: numeric vector with lower boundaries of the covariates. The boundaries are obligatory since the dynamic \code{rf} adjustment \citep{corana_1987, pronzato_1984} depends on the number of invalid covariate combinations.
+	\item \code{upper}: numeric vector with upper boundaries of the covariates.
+	\item \code{control}: a list with optional further parameters.
 \end{itemize}
 All parameters in the list with \code{control} arguments have a default value. They are pre-parameterized for loss functions of medium complexity. \code{control} arguments are:
 \begin{itemize}
-	\item \code{vf}: Function that determines the variation of covariates during the iterations. It is allowed to depend on \code{rf}, \code{temperature} and a vector of covariates of the current iteration. The variation function is a crucial element of \code{optim\_sa} which enables flexible programming. It is (next to the loss function itself) the second possibility to define restrictions. The parameter space of the optimization program can be defined \code{vf}. Per default, the covariates are changed by a continuous, uniform distributed random number. It must be considered that defining specific \code{rf} can increase the calculation time. The default \code{rf} is a compiled C++ function whereas user specified \code{rf} must be defined as R functions. User specified are e. g. useful for optimization problems with non-continuous parameter space.
-	\item \code{rf}: Numeric vector with random factors. The random factors determine the range of the random number in the variation function vf relative to the dimension of the function variables. The rf can be stated separately for each variable. Default is a vector of ones. If \code{dyn\_rf} is enabled, the entries in \code{rf} change dynamically over time.
-	\item \code{dyn\_rf}: Logical. Default is \code{TRUE} \code{rf} change dynamically over time to ensure increasing precision with increasing number of iterations. Default is \code{TRUE}. \code{dyn\_rf} ensures a relatively wide search domain at the beginning of the optimization process that shrinks over time \citep{corana_1987, pronzato_1984}. Disabling \code{dyn\_rf} can be useful when \code{rf} with high performance are known. The development of \code{rf} is documented in the \code{trace} matrix. Evaluation of former optimizations with dynamic \code{rf} can thus help finding reasonable fixed \code{rf}. Self-specified \code{vf} may not depend on \code{rf}. In this cases activating \code{dyn\_rf} makes no sense.
-	\item \code{t0}: Initial temperature. Default is 1000. The temperature directly influences the likelihood of accepting worse responses thus the stochastic part of the optimization. \code{t0} should be adopted to the loss function complexity. Higher temperatures lead to higher ability of coping with local optima on the one but also to more time-consuming function calls on the other hand.
-	\item \code{t\_min}: Numeric value that determines the temperature where outer loop stops. Default is 0.1. As there is approximately no chance of leaving local optima in iterations with low temperature \code{t\_min} mainly affects accuracy of the solution. Higher \code{t\_min} yields to lower accuracy and less function calls.
-	\item \code{nlimit}: Integer value which determines the maximum number of inner loops iterations. Default is 100. If the break criterion \code{stopac} is not fulfilled, \code{nlimit} is the exact number of inner loops repetitions.
-	\item \code{r}: Numeric value that determines the reduction of the temperature at the end of the outer loop. Slower temperature reduction leads to increasing number of function calls. It should be parameterized with respect to \code{nlimit}. High \code{nlimit} in combination with low \code{r} lead to many iterations with the same acceptance likelihood of worse responses. Low \code{nlimit} in combination with \code{r} near 1, by contrast, lead to continuously decreasing acceptance likelihood of worse responses.
-	\item \code{k}: Numeric value. Constant for the Metropolis function \citep{kirkpatrick_1983}. Default is 1. \code{k} determines the global, non-dynamic likelihood of accepting worse responses. The higher \code{k} the higher the likelihood of accepting worse responses.
-	\item \code{stopac}: Number of repetitions when the threshold accepting criterion is fulfilled. Can break the inner but not the outer loop.
-	\item \code{ac\_acc}: Respective accuracy for the threshold accepting criterion in relation to the response. Very useful for optimization problems without high requirements on accuracy. Lower accuracy can speed-up the solution substantially.
+	\item \code{vf}: function that determines the variation of covariates during the iterations. It is allowed to depend on \code{rf}, \code{temperature} and a vector of covariates of the current iteration. The variation function is a crucial element of \code{optim\_sa} which enables flexible programming. It is (next to the loss function itself) the second possibility to define restrictions. The parameter space of the optimization program can be defined \code{vf}. Per default, the covariates are changed by a continuous, uniform distributed random number. It must be considered that defining specific \code{rf} can increase the calculation time. The default \code{rf} is a compiled C++ function whereas user specified \code{rf} must be defined as R functions. User specified are e. g. useful for optimization problems with non-continuous parameter space.
+	\item \code{rf}: numeric vector with random factors. The random factors determine the range of the random number in the variation function vf relative to the dimension of the function variables. The rf can be stated separately for each variable. Default is a vector of ones. If \code{dyn\_rf} is enabled, the entries in \code{rf} change dynamically over time.
+	\item \code{dyn\_rf}: logical. Default is \code{TRUE} \code{rf} change dynamically over time to ensure increasing precision with increasing number of iterations. Default is \code{TRUE}. \code{dyn\_rf} ensures a relatively wide search domain at the beginning of the optimization process that shrinks over time \citep{corana_1987, pronzato_1984}. Disabling \code{dyn\_rf} can be useful when \code{rf} with high performance are known. The development of \code{rf} is documented in the \code{trace} matrix. Evaluation of former optimizations with dynamic \code{rf} can thus help finding reasonable fixed \code{rf}. Self-specified \code{vf} may not depend on \code{rf}. In this cases activating \code{dyn\_rf} makes no sense.
+	\item \code{t0}: initial temperature. Default is 1000. The temperature directly influences the likelihood of accepting worse responses thus the stochastic part of the optimization. \code{t0} should be adopted to the loss function complexity. Higher temperatures lead to higher ability of coping with local optima on the one but also to more time-consuming function calls on the other hand.
+	\item \code{t\_min}: numeric value that determines the temperature where outer loop stops. Default is 0.1. As there is approximately no chance of leaving local optima in iterations with low temperature \code{t\_min} mainly affects accuracy of the solution. Higher \code{t\_min} yields to lower accuracy and less function calls.
+	\item \code{nlimit}: integer value which determines the maximum number of inner loops iterations. Default is 100. If the break criterion \code{stopac} is not fulfilled, \code{nlimit} is the exact number of inner loops repetitions.
+	\item \code{r}: numeric value that determines the reduction of the temperature at the end of the outer loop. Slower temperature reduction leads to increasing number of function calls. It should be parameterized with respect to \code{nlimit}. High \code{nlimit} in combination with low \code{r} lead to many iterations with the same acceptance likelihood of worse responses. Low \code{nlimit} in combination with \code{r} near 1, by contrast, lead to continuously decreasing acceptance likelihood of worse responses.
+	\item \code{k}: numeric value. Constant for the Metropolis function \citep{kirkpatrick_1983}. Default is 1. \code{k} determines the global, non-dynamic likelihood of accepting worse responses. The higher \code{k} the higher the likelihood of accepting worse responses.
+	\item \code{stopac}: number of repetitions when the threshold accepting criterion is fulfilled. Can break the inner but not the outer loop.
+	\item \code{ac\_acc}: respective accuracy for the threshold accepting criterion in relation to the response. Very useful for optimization problems without high requirements on accuracy. Lower accuracy can speed-up the solution substantially.
 \end{itemize}
 
 \section{Practical examples}
@@ -97,25 +97,25 @@ f(x_1,x_2)=(x_1^2+x_2-11)^2+(x_1+x_2^2-7)^2
 We performed 10,000 optimizations with different functions in order investigate quality and speed. We parameterized the \code{optim\_sa} function for relatively simple optimization problems. We tried to find parameters for all other investigated functions such the problem was solved properly. We performed optimizations having the following parameters:
 
 \begin{example}
-# stats::optim (NM)
-optim(fn = hi, par = c(10, 10), method = "Nelder-Mead")
+# stats package: optim (NM)
+stats::optim(fn = hi, par = c(10, 10), method = "Nelder-Mead")
 	
-# optimization::optim_sa
-optim_sa(fun = hi, start = (c(10, 10)), trace = TRUE, 
+# optimization package: optim_sa
+optimization::optim_sa(fun = hi, start = (c(10, 10)), trace = TRUE, 
 	lower = c(-40, -40), upper=c(40, 40),
 		control = list(t0 = 500, nlimit = 50,r = 0.85,
 		rf = 3, ac_acc = 0.1, dyn_rf = TRUE
 		)
 	)
 
-# stats::optim (SA)
-optim(fn = hi, par = c(10, 10), method = "SANN",
+# stats package optim (SA)
+stats::optim(fn = hi, par = c(10, 10), method = "SANN",
 	control = list(tmax = 500, reltol = 0.1, temp = 50, trace = TRUE
 		)
 	)
 
-# GenSA::GenSA
-GenSA(fn = hi, par = c(10, 10), lower = c(-40, -40), upper = c(40, 40), 
+# GenSA package: GenSA
+GenSA::GenSA(fn = hi, par = c(10, 10), lower = c(-40, -40), upper = c(40, 40), 
 	control = list(temperature = 50, nb.stop.improvement = 30, maxit = 500)
 	)
 \end{example}
@@ -141,20 +141,46 @@ Since we have a multimodal optimization problem, we must evaluate response as we
 
 It could be seen that parameterization of NM was quite easy. It only needed a vector with starting values. The other functions needed much more settings. With view to accuracy each method performed well. All functions returned in mean of 10,000 calls responses $\leq$ 0.01 using the displayed parameters. All functions were thus generally able to find a proper solution. With view to frequency distribution the functions performed indifferent (Table \ref{tab:tab1}). \code{optim\_sa} and \code{optim (SA)} returned each possible solutions, where the covariate combination \{-3.8, -3.3\} was consistently less frequent. \code{GenSa} and \code{optim (NM)}, however, solely returned \{-3.8, -3.3\}. Further investigation revealed the solutions of \code{GenSa} and \code{optim (NM)} to be sensitive of the starting values. If \code{GenSa} and \code{optim (NM)} were parameterized with randomly drawn starting values, all 4 results would have been possible. Advantage of \code{optim\_sa} and \code{optim (SA)} against \code{GenSa} and \code{optim (NM)} is, in this example, thus its independence from starting values. If an optimization problem has multiple equivalent solutions, \code{optim (SA)} is able to archive each possible solution. Practically, in case users are in doubt whether a problem has multiple solutions, the function can be repeated without re-parameterization. If well-specified, \code{optim\_sa} will return all possible solutions within the parameter space.
 
-As all functions were practically able to minimize equation \ref{eq:eq1}, comparison of calculation times appears to be another quite important point
+As all functions were practically able to minimize equation \ref{eq:eq1}, comparison of calculation times appears to be another important point for quality assessment of the algorithms. It showed up that the direct search method \code{optim NM} was by far faster then the random search methods (Figure \ref{fig:fig1}). The ranking within the group of random search methods was also obvious. \code{GenSA} was in mean 3.5 times faster than \code{optim\_sa}. Both functions able coping with equally valued optima were slower than these returning only 1 solution (Table \ref{tab:tab1}, Figure \ref{fig:fig1}). Due to the multiple additional options (which are all called several times in the code) \code{optim\_sa} was by far slowest. This example clearly reveals that higher flexibility on the one hand leads to significantly higher calculation times on the other hand.
 
 \begin{figure}[htbp]
 	\centering
 	\resizebox{.7\linewidth}{!}{\input{Fig/fig1_ex1-time.tex}}
-	\caption{test r-tikz. - truncated y-axis}
+	\caption{Calculation times of the 4 examined optimization algorithms. Note that the y-axis is truncated since every method showed outliers above 4 milliseconds. \code{optim\_sa} and \code{optim (SA)} showed much outliers than \code{optim (NM)} and \code{GenSA}}.
 	\label{fig:fig1}
 \end{figure}
 
+\subsection{Himmelblau Function with discrete parameter space}
+A second example illustrating option to flexibly define parameter space also bases on the function by \citet{himmelblau_1972}. In case the user is interested in integer covariate combinations only, the \code{vf} option can be used to restrict the parameter space. The following simple example shows how a variation rule could look like for integer programming problems. Mixed integer problems work similarly.
 
+\begin{example}
+# Define vf
+var_fun_int <- function(para_0, fun_length, rf, temp = NA){
+	ret_var_fun <- para_0 + sample.int(rf, fun_length, replace = TRUE) *
+	((rbinom(fun_length, 1, 0.5) * -2) + 1)
+	return (ret_var_fun)
+}
 
+# Call optim_sa
+int_programming <- optimization::optim_sa(fun = hi, start = (c(10, 10)), trace = TRUE, 
+	lower = c(-40, -40), upper=c(40, 40),
+	control = list(t0 = 500, nlimit = 50,r = 0.85, rf = 3, ac_acc = 0.1,
+		dyn_rf = TRUE, vf = var_func_int
+		)
+	)
+\end{example}
 
+Calling the minimization function always leads to $f(3, 2)=0$. To achieve this, vf must be defined as a R function. The simple \code{var\_fun\_int} from the example returns a vector of integer covariates varying in dimension of \code{vf} around the passed covariates. The \code{fun\_length} is passed explicitly, although it is implicitly given by the length of \code{para\_0}. because it might help simplifying the \code{vf}. \code{rf} and \code{temp} are optionally. If \code{vf} needs no dynamic part, they can separately be disabled by passing \code{NA}. Other restrictions may be defined analogously. \code{vf} can be used to explicitly restrict the parameter space. The generic plot function of the \code{optimization} package helps interpreting the convergence and thus the solution quality. Since the given example is 2-dimensional, a \textit{contour plot} can be created. It becomes obvious that only integer covariate combinations were examined during optimization. Further hints for interpret can be found in the package documentation.
 
-\section{A complexer function?}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.01\textwidth]{Fig/fig2-ex2-plot.eps}
+	\caption{Examination plots.}
+	\label{fig:fig2}
+\end{figure}
+
+As \code{optim\_sa} also allows undefined responses of the loss, state space restrictions
+\subsection{A complexer function?}
 GenSA should be advantageous
 \subsection{SVAR}
 Alex

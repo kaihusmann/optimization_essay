@@ -1,0 +1,349 @@
+% This file was created with JabRef 2.10.
+% Encoding: UTF-8
+
+
+@Article{cerny_1985,
+  Title                    = {Thermodynamical approach to the traveling salesman problem: An efficient simulation algorithm},
+  Author                   = {{\v{C}}ern{\`y}, Vladim{\'\i}r},
+  Journal                  = {Journal of optimization theory and applications},
+  Year                     = {1985},
+  Number                   = {1},
+  Pages                    = {41--51},
+  Volume                   = {45},
+
+  Publisher                = {Springer}
+}
+
+@Article{agostini_2006,
+  Title                    = {Generalized simulated annealing applied to protein folding studies},
+  Author                   = {Agostini, Flavia P and Soares-Pinto, Diogo De O and Moret, Marcelo A and Osthoff, Carla and Pascutti, Pedro G},
+  Journal                  = {Journal of computational chemistry},
+  Year                     = {2006},
+  Number                   = {11},
+  Pages                    = {1142--1155},
+  Volume                   = {27},
+
+  Publisher                = {Wiley Online Library}
+}
+
+@Article{baskent_2002,
+  Title                    = {Forest landscape management modeling using simulated annealing},
+  Author                   = {Baskent, Emin Z and Jordan, Glen A},
+  Journal                  = {Forest Ecology and Management},
+  Year                     = {2002},
+  Number                   = {1},
+  Pages                    = {29--45},
+  Volume                   = {165},
+
+  Publisher                = {Elsevier}
+}
+
+@Article{blum_2003,
+  Title                    = {Metaheuristics in combinatorial optimization: Overview and conceptual comparison},
+  Author                   = {Blum, Christian and Roli, Andrea},
+  Journal                  = {ACM Computing Surveys (CSUR)},
+  Year                     = {2003},
+  Number                   = {3},
+  Pages                    = {268--308},
+  Volume                   = {35},
+
+  Publisher                = {ACM}
+}
+
+@Article{clarke_1964,
+  Title                    = {Scheduling of vehicles from a central depot to a number of delivery points},
+  Author                   = {Clarke, Geoff and Wright, John W},
+  Journal                  = {Operations research},
+  Year                     = {1964},
+  Number                   = {4},
+  Pages                    = {568--581},
+  Volume                   = {12},
+
+  Publisher                = {INFORMS}
+}
+
+@Article{corana_1987,
+  Title                    = {Minimizing Multimodal Functions of Continuous Variables with the “Simulated Annealing” algorithm},
+  Author                   = {Corana, A. and Marchesi, M. and Martini, C. and Ridella, S.},
+  Journal                  = {ACM Trans. Math. Softw.},
+  Year                     = {1987},
+  Number                   = {3},
+  Pages                    = {262--280},
+  Volume                   = {13},
+
+  Owner                    = {khusman1},
+  Timestamp                = {2017.02.09}
+}
+
+@Book{dantzig_1966,
+  Title                    = {Lineare Programmierung und Erweiterungen},
+  Author                   = {Dantzig, George Bernard},
+  Publisher                = {Springer},
+  Year                     = {1966},
+
+  Address                  = {Berlin [u.a.]},
+  Number                   = {2},
+
+  Owner                    = {khusman1},
+  Timestamp                = {2017.02.09}
+}
+
+@Article{dantzig_1959,
+  Title                    = {On a linear-programming, combinatorial approach to the traveling-salesman problem},
+  Author                   = {Dantzig, George Bernard and Fulkerson, Delbert R and Johnson, Selmer M},
+  Journal                  = {Operations Research},
+  Year                     = {1959},
+  Number                   = {1},
+  Pages                    = {58--66},
+  Volume                   = {7},
+
+  Publisher                = {INFORMS}
+}
+
+@Article{desarbo_1989,
+  Title                    = {A simulated annealing methodology for clusterwise linear regression},
+  Author                   = {DeSarbo, Wayne S and Oliver, Richard L and Rangaswamy, Arvind},
+  Journal                  = {Psychometrika},
+  Year                     = {1989},
+  Number                   = {4},
+  Pages                    = {707--736},
+  Volume                   = {54},
+
+  Publisher                = {Springer}
+}
+
+@Article{dueck_1990,
+  Title                    = {Threshold accepting: a general purpose optimization algorithm appearing superior to simulated annealing},
+  Author                   = {Dueck, Gunter and Scheuer, Tobias},
+  Journal                  = {Journal of computational physics},
+  Year                     = {1990},
+  Number                   = {1},
+  Pages                    = {161--175},
+  Volume                   = {90},
+
+  Publisher                = {Elsevier}
+}
+
+@Article{gao_2012,
+  Title                    = {Implementing the Nelder-Mead simplex algorithm with adaptive parameters},
+  Author                   = {Gao, Fuchang and Han, Lixing},
+  Journal                  = {Computational Optimization and Applications},
+  Year                     = {2012},
+  Number                   = {1},
+  Pages                    = {259--277},
+  Volume                   = {51},
+
+  Doi                      = {10.1007/s10589-010-9329-3},
+  Owner                    = {khusman1},
+  Timestamp                = {2017.02.09}
+}
+
+@Article{geiger_1999,
+  Title                    = {Das Nelder-Mead-Verfahren},
+  Author                   = {Geiger, Carl and Kanzow, Christian},
+  Journal                  = {Numerische Verfahren zur L{\"o}sung unregestrierter Optimierungsaufgaben},
+  Year                     = {1999},
+
+  Owner                    = {khusman1},
+  Timestamp                = {2017.02.09}
+}
+
+@Article{goffe_1996,
+  Title                    = {SIMANN: A global optimization algorithm using simulated annealing},
+  Author                   = {Goffe, William L and others},
+  Journal                  = {Studies in Nonlinear Dynamics and Econometrics},
+  Year                     = {1996},
+  Number                   = {3},
+  Pages                    = {169--176},
+  Volume                   = {1}
+}
+
+@Book{hansen_2012,
+  Title                    = {Modellbasierte Entscheidungsunterstützung für den Forstbetrieb: Optimierung kurzfristiger Nutzungsoptionen und mittelfristiger Strategien unter Verwendung metaheuristischer Verfahren und parallelen Rechnens},
+  Author                   = {Hansen, Jan Hendrik},
+  Publisher                = {Cuvillier},
+  Year                     = {2012},
+
+  Address                  = {Göttingen},
+  Edition                  = {1. Aufl.},
+
+  Owner                    = {khusman1},
+  Timestamp                = {2017.02.09}
+}
+
+@Article{ingber_1993,
+  Title                    = {Simulated annealing: Practice versus theory},
+  Author                   = {Ingber, Lester},
+  Journal                  = {Mathematical and computer modelling},
+  Year                     = {1993},
+  Number                   = {11},
+  Pages                    = {29--57},
+  Volume                   = {18},
+
+  Publisher                = {Elsevier}
+}
+
+@Article{kirkpatrick_1983,
+  Title                    = {Optimization by simulated annealing},
+  Author                   = {Kirkpatrick, Scott and Gelatt, C Daniel and Vecchi, Mario P and others},
+  Journal                  = {science},
+  Year                     = {1983},
+  Number                   = {4598},
+  Pages                    = {671--680},
+  Volume                   = {220},
+
+  Publisher                = {Washington}
+}
+
+@Article{lagarias_1998,
+  Title                    = {Convergence Properties of the Nelder-Mead Simplex Method in Low Dimensions},
+  Author                   = {Lagarias, Jeffrey C. and Reeds, James A. and Wright, Margaret H. and Wright, Paul E.},
+  Journal                  = {SIAM Journal on Optimization},
+  Year                     = {1998},
+  Number                   = {1},
+  Pages                    = {112--147},
+  Volume                   = {9},
+
+  Doi                      = {10.1137/S1052623496303470},
+  ISSN                     = {1052-6234},
+  Owner                    = {khusman1},
+  Timestamp                = {2017.02.09}
+}
+
+@Article{lin_1995,
+  Title                    = {A comparative study of both standard and adaptive versions of threshold accepting and simulated annealing algorithms in three scheduling problems},
+  Author                   = {Lin, CKYu and Haley, KBu and Sparks, C},
+  Journal                  = {European Journal of Operational Research},
+  Year                     = {1995},
+  Number                   = {2},
+  Pages                    = {330--346},
+  Volume                   = {83},
+
+  Publisher                = {Elsevier}
+}
+
+@Book{mathews_2004,
+  Title                    = {Numerical methods using MATLAB},
+  Author                   = {Mathews, John H. and Fink, Kurtis D.},
+  Publisher                = {Pearson},
+  Year                     = {{\copyright}2004},
+
+  Address                  = {Upper Saddle River and N.J},
+  Edition                  = {4},
+
+  ISBN                     = {0-13-065248-2},
+  Owner                    = {khusman1},
+  Timestamp                = {2017.02.09}
+}
+
+@Article{metropolis_1953,
+  Title                    = {Equation of state calculations by fast computing machines},
+  Author                   = {Metropolis, Nicholas and Rosenbluth, Arianna W and Rosenbluth, Marshall N and Teller, Augusta H and Teller, Edward},
+  Journal                  = {The journal of chemical physics},
+  Year                     = {1953},
+  Number                   = {6},
+  Pages                    = {1087--1092},
+  Volume                   = {21},
+
+  Publisher                = {AIP}
+}
+
+@Article{nelder_1965,
+  Title                    = {A simplex method for function minimization},
+  Author                   = {Nelder, John and Mead, Roger},
+  Journal                  = {Computer Journal},
+  Year                     = {1965},
+  Number                   = {4},
+  Pages                    = {308--313},
+  Volume                   = {7},
+
+  Owner                    = {khusman1},
+  Timestamp                = {2017.02.09}
+}
+
+@Article{pronzato_1984,
+  Title                    = {A general-purpose global optimizer: Implimentation and applications},
+  Author                   = {Pronzato, Luc and Walter, Eric and Venot, Alain and Lebruchec, Jean-Francois},
+  Journal                  = {Mathematics and Computers in Simulation},
+  Year                     = {1984},
+  Number                   = {5},
+  Pages                    = {412--422},
+  Volume                   = {26},
+
+  Doi                      = {10.1016/0378-4754(84)90105-8},
+  ISSN                     = {03784754},
+  Owner                    = {khusman1},
+  Timestamp                = {2017.02.09}
+}
+
+@Article{rosenbrock_1960,
+  Title                    = {An Automatic Method for Finding the Greatest or Least Value of a Function},
+  Author                   = {Rosenbrock, H. H.},
+  Journal                  = {The Computer Journal},
+  Year                     = {1960},
+  Number                   = {3},
+  Pages                    = {175--184},
+  Volume                   = {3},
+
+  Doi                      = {10.1093/comjnl/3.3.175},
+  ISSN                     = {0010-4620},
+  Owner                    = {khusman1},
+  Timestamp                = {2017.02.09}
+}
+
+@Article{sorensen_2015,
+  Title                    = {Metaheuristics—the metaphor exposed},
+  Author                   = {S{\"o}rensen, Kenneth},
+  Journal                  = {International Transactions in Operational Research},
+  Year                     = {2015},
+  Number                   = {1},
+  Pages                    = {3--18},
+  Volume                   = {22},
+
+  Publisher                = {Wiley Online Library}
+}
+
+@Article{theussl_2016,
+  Title                    = {{CRAN} {Task} {View}: {Optimization} and {Mathematical} {Programming}},
+  Author                   = {Theussl, Stefan and Borchers, Hans W.},
+  Year                     = {2016},
+
+  Month                    = oct,
+
+  File                     = {Snapshot:/home/khusman1/.mozilla/firefox/ykffmvee.default/zotero/storage/2S957BE5/Optimization.html:text/html},
+  Owner                    = {khusman1},
+  Shorttitle               = {{CRAN} {Task} {View}},
+  Timestamp                = {2017.02.17},
+  Url                      = {https://CRAN.R-project.org/view=Optimization},
+  Urldate                  = {2017-02-17}
+}
+
+@Book{tomick_1995,
+  Title                    = {On Convergence of the Nelder-Mead Simplex Algorithm for Unconstrained Stochastic Optimization},
+  Author                   = {Tomick, John James},
+  Year                     = {1995},
+
+  Institution              = {{The Pennsylvania State University}},
+  Owner                    = {khusman1},
+  Timestamp                = {2017.02.09}
+}
+
+@InProceedings{wegener_2005,
+  Title                    = {Simulated annealing beats metropolis in combinatorial optimization},
+  Author                   = {Wegener, Ingo},
+  Booktitle                = {International Colloquium on Automata, Languages, and Programming},
+  Year                     = {2005},
+  Organization             = {Springer},
+  Pages                    = {589--601}
+}
+
+@Article{xiang_2013,
+  Title                    = {Generalized Simulated Annealing for Global Optimization: the GenSA Package},
+  Author                   = {Xiang, Yang and Gubian, Sylvain and Suomela, Brian and Hoeng, Julia},
+  Journal                  = {The R Journal Volume 5(1):13-29, June 2013},
+  Year                     = {2013},
+
+  Owner                    = {khusman1},
+  Timestamp                = {2017.02.09}
+}
+
