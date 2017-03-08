@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  8 MAR 2017 14:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  8 MAR 2017 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1467,7 +1467,16 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 131.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 131.
-[5] (./test.tex)
+[5] (./Fig/fig1_ex1-time.tex
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.20004pt on input line 8778.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `T1/zi4/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `T1/zi4/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+)
 Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
@@ -1500,13 +1509,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 22954 strings out of 494860
- 406619 string characters out of 6177603
- 2346012 words of memory out of 5000000
- 25544 multiletter control sequences out of 15000+600000
- 51285 words of font info for 222 fonts, out of 8000000 for 9000
+ 22957 strings out of 494860
+ 406693 string characters out of 6177603
+ 2349442 words of memory out of 5000000
+ 25546 multiletter control sequences out of 15000+600000
+ 51584 words of font info for 223 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,20n,57p,2795b,2706s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,20n,57p,2795b,2774s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t
 1-0.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
 texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/sh
@@ -1517,10 +1526,10 @@ ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pala
 tino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a
 .pfb>
-Output written on RJwrapper.pdf (8 pages, 360127 bytes).
+Output written on RJwrapper.pdf (8 pages, 360289 bytes).
 PDF statistics:
  319 PDF objects out of 1000 (max. 8388607)
  297 compressed objects within 3 object streams
  49 named destinations out of 1000 (max. 500000)
- 39530 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 40042 words of extra memory for PDF output out of 42996 (max. 10000000)
 
