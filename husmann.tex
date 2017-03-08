@@ -170,24 +170,26 @@ int_programming <- optimization::optim_sa(fun = hi, start = (c(10, 10)), trace =
 	)
 \end{example}
 
-Calling the minimization function always leads to $f(3, 2)=0$. To achieve this, vf must be defined as a R function. The simple \code{var\_fun\_int} from the example returns a vector of integer covariates varying in dimension of \code{vf} around the passed covariates. The \code{fun\_length} is passed explicitly, although it is implicitly given by the length of \code{para\_0}. because it might help simplifying the \code{vf}. \code{rf} and \code{temp} are optionally. If \code{vf} needs no dynamic part, they can separately be disabled by passing \code{NA}. Other restrictions may be defined analogously. \code{vf} can be used to explicitly restrict the parameter space. The generic plot function of the \code{optimization} package helps interpreting the convergence and thus the solution quality. Since the given example is 2-dimensional, a \textit{contour plot} can be created. It becomes obvious that only integer covariate combinations were examined during optimization. Further hints for interpret can be found in the package documentation.
+Calling the minimization function always leads to $f(3, 2)=0$. To achieve this, vf must be defined as a R function. The simple \code{var\_fun\_int} from the example returns a vector of integer covariates varying in dimension of \code{vf} around the passed covariates. The \code{fun\_length} is passed explicitly, although it is implicitly given by the length of \code{para\_0}. because it might help simplifying the \code{vf}. \code{rf} and \code{temp} are optionally. If \code{vf} needs no dynamic part, they can separately be disabled by passing \code{NA}. Other restrictions may be defined analogously. \code{vf} can be used to explicitly restrict the parameter space. The generic plot function of the \code{optimization} package helps interpreting the convergence and thus the solution quality. Since the given example is 2-dimensional, a \textit{contour plot} can be created. It becomes obvious that only integer covariate combinations were examined during optimization (Figure \ref{fig:fig2}). Figure \ref{fig:fig2} reveals that though response of iteration 10 with parameter combination \{2, 2\} was already quite near to the optimum, the stochastic component of the algorithm leaded to worse response of iteration 11. Further hints for interpretation can be found in the package documentation.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1.01\textwidth]{Fig/fig2-ex2-plot.eps}
-	\caption{Examination plots.}
+	\caption{Examination plots created with the generic plot function. The left diagram shows the current optimal response over iteration of the outer loop. The left diagram displays the succession of the covariate values. The star points the covariate combination at optimum.}
 	\label{fig:fig2}
 \end{figure}
 
-As \code{optim\_sa} also allows undefined responses of the loss, state space restrictions
 \subsection{A complexer function?}
-GenSA should be advantageous
+
 \subsection{SVAR}
 Alex
 \subsection{Forest harvesting schedule optimization}
-\section{Summary and discussion}
-It does not guarantee, of course, to find the global minimum, but if the function has many good near- optimal solutions, it should find one. In particular, this method is able to discriminate between “gross behavior” of the function and finer “wrinkles.” First, it reaches an area in the function domain where a global minimum should be present, following the gross behavior irrespectively of small local minima found on the way. It then develops finer details, finding a good, near-optimal local minimum, if not the global minimum itself.\\
+The method is currently used for optimizing forest activities.
+\section{Discussion and outlook}
+It does not guarantee, of course, to find the global minimum, but if the function has many good near- optimal solutions, it should find one. In particular, this method is able to discriminate between gross behavior of the function and finer wrinkles. First, it reaches an area in the function domain where a global minimum should be present, following the gross behavior irrespectively of small local minima found on the way. It then develops finer details, finding a good, near-optimal local minimum, if not the global minimum itself.\\
 
+Every method has advantages and disadvantages: GenSA for example is by far most efficient. It should be used for problems with 1 global optimum. optim\_sa has its niche -> mult. equal opt. = felxible loss; NA returns
+-> enrichment of the optimization procedures in R  
 This section may contain a figure such as Figure~\ref{figure:rlogo}.
 This file is only a basic article template. For full details of \emph{The R Journal} style and information on how to prepare your article for submission, see the \href{http://journal.r-project.org/share/author-guide.pdf}{Instructions for Authors}.
 
