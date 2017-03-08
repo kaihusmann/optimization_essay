@@ -30,6 +30,8 @@
 \backcite {kirkpatrick_1983}{{2}{2.2}{section.2.2}}
 \backcite {kirkpatrick_1983}{{2}{2.2}{algocf.1}}
 \backcite {corana_1987}{{3}{2.2}{algocf.1}}
+\backcite {pronzato_1984}{{3}{2.2}{algocf.1}}
+\backcite {corana_1987}{{3}{2.2}{algocf.1}}
 \backcite {metropolis_1953}{{3}{2.2}{algocf.1}}
 \backcite {kirkpatrick_1983}{{3}{2.2}{algocf.1}}
 \backcite {lin_1995}{{3}{2.2}{algocf.1}}
@@ -45,4 +47,4 @@
 \backcite {pronzato_1984}{{4}{2.3.1}{subsection.2.3.1}}
 \backcite {kirkpatrick_1983}{{4}{2.3.1}{subsection.2.3.1}}
 \backcite {himmelblau_1972}{{5}{2.4.1}{subsection.2.4.1}}
-\backcite {nelder_1965}{{5}{2.4.1}{equation.2.4.1}}
+\backcite {nelder_1965}{{5}{2.4.1}{subsection.2.4.1}}
