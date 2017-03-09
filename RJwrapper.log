@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  9 MAR 2017 18:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.7.14)  9 MAR 2017 20:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **RJwrapper.tex
 (./RJwrapper.tex
 LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -1175,7 +1175,7 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen257
 )
-(/usr/share/texmf/tex/latex/algorithm2e/algorithm2e.sty
+(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
 \c@AlgoLine=\count145
 
@@ -1478,10 +1478,10 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 ) [6]
 Package epstopdf Info: Source file: <Fig/fig2-ex2-plot.eps>
-(epstopdf)                    date: 2017-03-08 19:47:58
+(epstopdf)                    date: 2017-03-09 19:51:27
 (epstopdf)                    size: 3402470 bytes
 (epstopdf)             Output file: <Fig/fig2-ex2-plot-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-09 08:31:01
+(epstopdf)                    date: 2017-03-09 19:51:27
 (epstopdf)                    size: 362866 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig/fig2-ex2-plot-eps-conv
 erted-to.pdf Fig/fig2-ex2-plot.eps>
@@ -1505,55 +1505,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
  []
 
-<Fig/Rlogo.png, id=271, 101.37875pt x 77.28876pt>
-File: Fig/Rlogo.png Graphic file (type png)
- <use Fig/Rlogo.png>
-Package pdftex.def Info: Fig/Rlogo.png used on input line 201.
-(pdftex.def)             Requested size: 101.3785pt x 77.28856pt.
+
+LaTeX Warning: Reference `figure:rlogo' on page 8 undefined on input line 196.
 
 (./RJwrapper.bbl (./RJwrapper.brf)
 \tf@brf=\write6
 \openout6 = `RJwrapper.brf'.
 
- [8 <./Fig/Rlogo.png>]) [9]) [10]
+ [8])) [9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 26.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 26.
-
-(./RJwrapper.aux)
+ (./RJwrapper.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 26.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 26.
 Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
 (rerunfilecheck)             Checksum: 362A7AB7A541BFD7501C3E9E765CAF5E;915.
 Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
 (rerunfilecheck)             Checksum: A1BBED44F99039854F563B73FB18260F;2640.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
- )
-(\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 1061 ({)
-### bottom level 
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
+ ) 
 Here is how much of TeX's memory you used:
- 22999 strings out of 494860
- 407416 string characters out of 6177603
- 2336164 words of memory out of 5000000
- 25570 multiletter control sequences out of 15000+600000
+ 22991 strings out of 493029
+ 407348 string characters out of 6136234
+ 2327114 words of memory out of 5000000
+ 25794 multiletter control sequences out of 15000+600000
  52049 words of font info for 229 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 62i,20n,57p,2831b,2774s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t
-1-0.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
-texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pala
-tino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a
-.pfb>
-Output written on RJwrapper.pdf (10 pages, 733733 bytes).
+ 1141 hyphenation exceptions out of 8191
+ 62i,20n,57p,2831b,947s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/
+share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-
+dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palati
+no/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on RJwrapper.pdf (9 pages, 716611 bytes).
 PDF statistics:
- 370 PDF objects out of 1000 (max. 8388607)
- 342 compressed objects within 4 object streams
- 56 named destinations out of 1000 (max. 500000)
- 40055 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 362 PDF objects out of 1000 (max. 8388607)
+ 336 compressed objects within 4 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 40050 words of extra memory for PDF output out of 42996 (max. 10000000)
 
