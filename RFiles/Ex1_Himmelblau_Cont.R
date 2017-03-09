@@ -134,7 +134,7 @@ save.image(file = '/home/khusman1/Documents/Veroeffentlichungen/optimization_ess
 boxplot(cbind(mb.4$time, mb.1$time, mb.2$time, mb.3$time))
 
 
-cex.plot.tex <- 1.6
+cex.plot.tex <- 1.8
 tikzDevice::tikz('Fig/fig1_ex1-time.tex', h = 7, w = 7)
 par(mar = c(6, 6, 2, 2) + 0.1)
 boxplot(cbind(mb.4$time, mb.1$time, mb.2$time, mb.3$time), ylim = c(0, 4e7), axes = FALSE)
@@ -145,3 +145,4 @@ axis(2, las = 2, labels = FALSE, lwd = 0, lwd.ticks = 1)
 mtext(side = 2, line = 1.5, c(0 : 4), cex = cex.plot.tex, at = seq(0, 4e7, 1e7), las = 2)
 box()
 dev.off()
+
