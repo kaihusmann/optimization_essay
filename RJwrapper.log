@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  9 MAR 2017 09:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  9 MAR 2017 10:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1485,31 +1485,31 @@ Package epstopdf Info: Source file: <Fig/fig2-ex2-plot.eps>
 (epstopdf)                    size: 362866 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig/fig2-ex2-plot-eps-conv
 erted-to.pdf Fig/fig2-ex2-plot.eps>
-(epstopdf)             \includegraphics on input line 179.
+(epstopdf)             \includegraphics on input line 177.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig/fig2-ex2-plot-eps-converted-to.pdf, id=238, 1011.78pt x 505.89pt>
+<Fig/fig2-ex2-plot-eps-converted-to.pdf, id=239, 1011.78pt x 505.89pt>
 File: Fig/fig2-ex2-plot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig/fig2-ex2-plot-eps-converted-to.pdf>
 Package pdftex.def Info: Fig/fig2-ex2-plot-eps-converted-to.pdf used on input l
-ine 179.
+ine 177.
 (pdftex.def)             Requested size: 402.31976pt x 201.16364pt.
 
-Overfull \hbox (3.98119pt too wide) in paragraph at lines 179--180
+Overfull \hbox (3.98119pt too wide) in paragraph at lines 177--178
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
 [7 <./Fig/fig2-ex2-plot-eps-converted-to.pdf>]
-<Fig/Rlogo.png, id=255, 101.37875pt x 77.28876pt>
+<Fig/Rlogo.png, id=256, 101.37875pt x 77.28876pt>
 File: Fig/Rlogo.png Graphic file (type png)
  <use Fig/Rlogo.png>
-Package pdftex.def Info: Fig/Rlogo.png used on input line 200.
+Package pdftex.def Info: Fig/Rlogo.png used on input line 198.
 (pdftex.def)             Requested size: 101.3785pt x 77.28856pt.
 
 (./RJwrapper.bbl (./RJwrapper.brf)
@@ -1533,11 +1533,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 22967 strings out of 494860
- 406949 string characters out of 6177603
+ 22965 strings out of 494860
+ 406931 string characters out of 6177603
  2335936 words of memory out of 5000000
  25552 multiletter control sequences out of 15000+600000
- 51510 words of font info for 222 fonts, out of 8000000 for 9000
+ 51429 words of font info for 221 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  62i,20n,57p,2831b,2774s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t
@@ -1550,10 +1550,10 @@ ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pala
 tino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a
 .pfb>
-Output written on RJwrapper.pdf (9 pages, 727123 bytes).
+Output written on RJwrapper.pdf (9 pages, 727541 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
+ 348 PDF objects out of 1000 (max. 8388607)
+ 321 compressed objects within 4 object streams
  52 named destinations out of 1000 (max. 500000)
  40055 words of extra memory for PDF output out of 42996 (max. 10000000)
 
