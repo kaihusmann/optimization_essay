@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.7.14)  13 MAR 2017 18:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  14 MAR 2017 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **RJwrapper.tex
 (./RJwrapper.tex
 LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -1175,7 +1175,7 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen257
 )
-(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+(/usr/share/texmf/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
 \c@AlgoLine=\count145
 
@@ -1373,30 +1373,30 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 21.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 23.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 21.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 23.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 21.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 23.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 21.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 23.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 21.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 23.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
@@ -1407,35 +1407,35 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 21.
+(Font)              scaled to size 9.37807pt on input line 23.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 21.
+(Font)              scaled to size 7.29405pt on input line 23.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 21.
+(Font)              scaled to size 5.21004pt on input line 23.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 21.
+(Font)              scaled to size 9.37807pt on input line 23.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 21.
+(Font)              scaled to size 7.29405pt on input line 23.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 21.
+(Font)              scaled to size 5.21004pt on input line 23.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 50.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 52.
  [2]
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 61.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2014/06/22 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.18004pt on input line 61.
+(Font)              scaled to size 9.18004pt on input line 63.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1447,27 +1447,27 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
  [3]
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 63.
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [4] [5]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 128.
+               Default added (so using `tbp') on input line 130.
 
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 132.
+(Font)              scaled to size 10.42007pt on input line 134.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 132.
+(Font)              scaled to size 7.91925pt on input line 134.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 132.
+(Font)              scaled to size 6.25204pt on input line 134.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 132.
+(Font)              scaled to size 10.42007pt on input line 134.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 132.
+(Font)              scaled to size 7.91925pt on input line 134.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 132.
+(Font)              scaled to size 6.25204pt on input line 134.
 (./Fig/fig1_ex1-time.tex
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 10.20004pt on input line 8776.
@@ -1479,30 +1479,30 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 ) [6]
 Package epstopdf Info: Source file: <Fig/fig2-ex2-plot.eps>
-(epstopdf)                    date: 2017-03-09 19:51:27
+(epstopdf)                    date: 2017-03-08 19:47:58
 (epstopdf)                    size: 3402470 bytes
 (epstopdf)             Output file: <Fig/fig2-ex2-plot-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-09 19:51:27
+(epstopdf)                    date: 2017-03-09 08:31:01
 (epstopdf)                    size: 362866 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig/fig2-ex2-plot-eps-conv
 erted-to.pdf Fig/fig2-ex2-plot.eps>
-(epstopdf)             \includegraphics on input line 180.
+(epstopdf)             \includegraphics on input line 181.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig/fig2-ex2-plot-eps-converted-to.pdf, id=241, 1011.78pt x 505.89pt>
+<Fig/fig2-ex2-plot-eps-converted-to.pdf, id=239, 1011.78pt x 505.89pt>
 File: Fig/fig2-ex2-plot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig/fig2-ex2-plot-eps-converted-to.pdf>
 Package pdftex.def Info: Fig/fig2-ex2-plot-eps-converted-to.pdf used on input l
-ine 180.
+ine 181.
 (pdftex.def)             Requested size: 402.31976pt x 201.16364pt.
 
-Overfull \hbox (3.98119pt too wide) in paragraph at lines 180--181
+Overfull \hbox (3.98119pt too wide) in paragraph at lines 181--182
  [][] 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
 
@@ -1522,28 +1522,33 @@ Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
 Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
 (rerunfilecheck)             Checksum: 69469F69E24DC494B6630A148D4AE68A;2712.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 1061 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 22988 strings out of 493029
- 407311 string characters out of 6136234
- 2332947 words of memory out of 5000000
- 25793 multiletter control sequences out of 15000+600000
- 51894 words of font info for 227 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 62i,20n,57p,3564b,947s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/
-share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-
-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palati
-no/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RJwrapper.pdf (10 pages, 719601 bytes).
+ 22991 strings out of 494860
+ 407300 string characters out of 6177603
+ 2342065 words of memory out of 5000000
+ 25565 multiletter control sequences out of 15000+600000
+ 52166 words of font info for 229 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 62i,20n,57p,3420b,2774s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t
+1-0.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
+texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pala
+tino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a
+.pfb>
+Output written on RJwrapper.pdf (10 pages, 721413 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
+ 366 PDF objects out of 1000 (max. 8388607)
+ 339 compressed objects within 4 object streams
  55 named destinations out of 1000 (max. 500000)
  40050 words of extra memory for PDF output out of 42996 (max. 10000000)
 
