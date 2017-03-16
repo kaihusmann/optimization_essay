@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  16 MAR 2017 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  16 MAR 2017 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1470,7 +1470,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 123.
 [5] (./Fig/fig1_ex1-time.tex
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.20004pt on input line 8776.
+(Font)              scaled to size 10.20004pt on input line 5118.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `T1/zi4/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1529,7 +1529,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
 Here is how much of TeX's memory you used:
  23006 strings out of 494860
  407456 string characters out of 6177603
- 2337686 words of memory out of 5000000
+ 1571950 words of memory out of 5000000
  25566 multiletter control sequences out of 15000+600000
  52979 words of font info for 238 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -1544,7 +1544,7 @@ ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pala
 tino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a
 .pfb>
-Output written on RJwrapper.pdf (10 pages, 764164 bytes).
+Output written on RJwrapper.pdf (10 pages, 718285 bytes).
 PDF statistics:
  366 PDF objects out of 1000 (max. 8388607)
  339 compressed objects within 4 object streams

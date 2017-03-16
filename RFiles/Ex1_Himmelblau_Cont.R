@@ -134,13 +134,13 @@ save.image(file = '/home/khusman1/Documents/Veroeffentlichungen/optimization_ess
 boxplot(cbind(mb.4$time, mb.1$time, mb.2$time, mb.3$time))
 
 
-cex.plot.tex <- 1.8
-tikzDevice::tikz('Fig/fig1_ex1-time.tex', h = 7, w = 7)
+cex.plot.tex <- 1.6
+tikzDevice::tikz('Fig/fig1_ex1-time.tex', h = 6, w = 6)
 par(mar = c(6, 6, 2, 2) + 0.1)
 boxplot(cbind(mb.4$time, mb.1$time, mb.2$time, mb.3$time), ylim = c(0, 4e7), axes = FALSE)
 axis(1, labels = FALSE, lwd = 0, lwd.ticks = 1)
 mtext(side = 2, line = 4, "Calculation time [millisecond]", cex = cex.plot.tex)
-mtext(side = 1, line = 2.5, at = c(1 : 4), c("optim (NM)", "optim\\_sa", "optim (SA)", "GenSA"), cex = cex.plot.tex)
+mtext(side = 1, line = c(1.5, 3, 1.5, 3), at = c(1 : 4), c("optim (NM)", "optim\\_sa", "optim (SA)", "GenSA"), cex = cex.plot.tex)
 axis(2, las = 2, labels = FALSE, lwd = 0, lwd.ticks = 1)
 mtext(side = 2, line = 1.5, c(0 : 4), cex = cex.plot.tex, at = seq(0, 4e7, 1e7), las = 2)
 box()
