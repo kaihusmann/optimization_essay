@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  16 MAR 2017 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  17 MAR 2017 09:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1489,7 +1489,7 @@ erted-to.pdf Fig/fig2-ex2-plot.eps>
 (epstopdf)             \includegraphics on input line 168.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig/fig2-ex2-plot-eps-converted-to.pdf, id=241, 607.26875pt x 303.1325pt>
+<Fig/fig2-ex2-plot-eps-converted-to.pdf, id=242, 607.26875pt x 303.1325pt>
 File: Fig/fig2-ex2-plot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig/fig2-ex2-plot-eps-converted-to.pdf>
@@ -1527,11 +1527,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 23006 strings out of 494860
- 407456 string characters out of 6177603
- 1571950 words of memory out of 5000000
+ 23000 strings out of 494860
+ 407399 string characters out of 6177603
+ 1572061 words of memory out of 5000000
  25566 multiletter control sequences out of 15000+600000
- 52979 words of font info for 238 fonts, out of 8000000 for 9000
+ 52669 words of font info for 234 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  62i,20n,57p,3406b,2774s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t
@@ -1544,10 +1544,10 @@ ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pala
 tino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a
 .pfb>
-Output written on RJwrapper.pdf (10 pages, 718285 bytes).
+Output written on RJwrapper.pdf (10 pages, 718620 bytes).
 PDF statistics:
- 366 PDF objects out of 1000 (max. 8388607)
- 339 compressed objects within 4 object streams
+ 367 PDF objects out of 1000 (max. 8388607)
+ 340 compressed objects within 4 object streams
  55 named destinations out of 1000 (max. 500000)
  40050 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -137,7 +137,7 @@ To conclude, all functions were generally able to solve the problem. The flexibl
 \begin{figure}[htbp]
 	\centering
 	\resizebox{.6\linewidth}{!}{\input{Fig/fig1_ex1-time.tex}}
-	\caption{Calculation times of the 4 examined optimization algorithms. Note that the y-axis is truncated. \code{optim\_sa} and \code{optim (SA)} showed outliers up to 7 milliseconds.}
+	\caption{Calculation times of the 4 examined optimization algorithms. Note that the y-axis is truncated. \code{optim\_sa} sowed 101 and \code{optim (SA)} 70 outliers between 4 and 7 milliseconds.}
 	\label{fig:fig1}
 \end{figure}
 
@@ -186,6 +186,9 @@ It does not guarantee, of course, to find the global minimum, but if the functio
 Every method has advantages and disadvantages: GenSA for example is by far most efficient. It should be used for problems with 1 global optimum. optim\_sa has its niche -> mult. equal opt. = felxible loss; NA returns
 -> enrichment of the optimization procedures in R  
 
+Example 1 shows -> Our is slowest but together with optim (SA) best
+Ex 2 shows -> Our is the only one that solves the problem
+	--> Slow but flexible
 
 \bibliography{husmann}
 
