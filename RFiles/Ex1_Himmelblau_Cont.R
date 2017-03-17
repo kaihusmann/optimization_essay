@@ -133,6 +133,11 @@ save.image(file = '/home/khusman1/Documents/Veroeffentlichungen/optimization_ess
 
 boxplot(cbind(mb.4$time, mb.1$time, mb.2$time, mb.3$time))
 
+# Counting outliers
+length(mb.1$time[mb.1$time > 4e7])
+length(mb.2$time[mb.2$time > 4e7])
+length(mb.3$time[mb.3$time > 4e7])
+length(mb.4$time[mb.4$time > 4e7])
 
 cex.plot.tex <- 1.6
 tikzDevice::tikz('Fig/fig1_ex1-time.tex', h = 6, w = 6)
