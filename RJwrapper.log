@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.7.14)  18 MAR 2017 18:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.7.14)  19 MAR 2017 20:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1492,7 +1492,7 @@ erted-to.pdf Fig/fig2-ex2-plot.eps>
 (epstopdf)             \includegraphics on input line 172.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig/fig2-ex2-plot-eps-converted-to.pdf, id=286, 607.26875pt x 303.1325pt>
+<Fig/fig2-ex2-plot-eps-converted-to.pdf, id=289, 607.26875pt x 303.1325pt>
 File: Fig/fig2-ex2-plot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig/fig2-ex2-plot-eps-converted-to.pdf>
@@ -1526,13 +1526,13 @@ Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
  ) 
 Here is how much of TeX's memory you used:
- 23059 strings out of 493029
- 408135 string characters out of 6136234
- 1569968 words of memory out of 5000000
+ 23062 strings out of 493029
+ 408165 string characters out of 6136234
+ 1570098 words of memory out of 5000000
  25801 multiletter control sequences out of 15000+600000
- 56565 words of font info for 250 fonts, out of 8000000 for 9000
+ 56720 words of font info for 252 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,21n,57p,3448b,909s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,21n,57p,3408b,909s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/
 share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-
 dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/te
@@ -1543,10 +1543,10 @@ ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
 palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/upl
 r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RJwrapper.pdf (10 pages, 732913 bytes).
+Output written on RJwrapper.pdf (10 pages, 732915 bytes).
 PDF statistics:
- 417 PDF objects out of 1000 (max. 8388607)
- 389 compressed objects within 4 object streams
+ 420 PDF objects out of 1000 (max. 8388607)
+ 392 compressed objects within 4 object streams
  89 named destinations out of 1000 (max. 500000)
  41074 words of extra memory for PDF output out of 42996 (max. 10000000)
 
