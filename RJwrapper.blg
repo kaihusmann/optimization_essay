@@ -4,45 +4,45 @@ The top-level auxiliary file: RJwrapper.aux
 The style file: abbrvnat.bst
 Database file #1: husmann.bib
 Warning--empty journal in theussl_2016
-You've used 24 entries,
+You've used 26 entries,
             2773 wiz_defined-function locations,
-            760 strings with 9141 characters,
-and the built_in function-call counts, 11299 in all, are:
-= -- 1014
-> -- 665
-< -- 15
-+ -- 225
-- -- 201
-* -- 952
-:= -- 1757
-add.period$ -- 79
-call.type$ -- 24
-change.case$ -- 134
-chr.to.int$ -- 24
-cite$ -- 49
-duplicate$ -- 500
-empty$ -- 913
-format.name$ -- 242
-if$ -- 2342
+            773 strings with 9578 characters,
+and the built_in function-call counts, 12329 in all, are:
+= -- 1109
+> -- 725
+< -- 16
++ -- 245
+- -- 219
+* -- 1045
+:= -- 1913
+add.period$ -- 85
+call.type$ -- 26
+change.case$ -- 146
+chr.to.int$ -- 26
+cite$ -- 53
+duplicate$ -- 541
+empty$ -- 996
+format.name$ -- 264
+if$ -- 2555
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 29
-newline$ -- 132
-num.names$ -- 96
-pop$ -- 256
+missing$ -- 31
+newline$ -- 142
+num.names$ -- 104
+pop$ -- 276
 preamble$ -- 1
-purify$ -- 113
+purify$ -- 123
 quote$ -- 0
-skip$ -- 377
+skip$ -- 409
 stack$ -- 0
-substring$ -- 449
-swap$ -- 35
+substring$ -- 509
+swap$ -- 37
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 239
+type$ -- 261
 warning$ -- 1
-while$ -- 105
+while$ -- 115
 width$ -- 0
-write$ -- 326
+write$ -- 352
 (There was 1 warning)

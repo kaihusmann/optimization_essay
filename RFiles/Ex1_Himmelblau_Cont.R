@@ -94,7 +94,7 @@ trace$x.factor <- factor(trace$x.factor)
 cross.table.x <- xtabs(~meth + x.factor, data = trace)
 xtable(cross.table.x / 100) # LaTex Table.
 # save.image(file = '/home/khusman1/Documents/Veroeffentlichungen/optimization_essay/RFiles/Ex1_frequency.RData')
-
+# load(file = '/home/khusman1/Documents/Veroeffentlichungen/optimization_essay/RFiles/Ex1_frequency.RData')
 #---------------#
 ## Performance ##
 #---------------#
@@ -129,8 +129,8 @@ mb.4 <- microbenchmark(
 )
 
 ## Visualization & saving ##
-save.image(file = '/home/khusman1/Documents/Veroeffentlichungen/optimization_essay/RFiles/Ex1_speed.RData')
-
+# save.image(file = '/home/khusman1/Documents/Veroeffentlichungen/optimization_essay/RFiles/Ex1_speed.RData')
+# load(file = '/home/khusman1/Documents/Veroeffentlichungen/optimization_essay/RFiles/Ex1_speed.RData')
 boxplot(cbind(mb.4$time, mb.1$time, mb.2$time, mb.3$time))
 
 # Counting outliers
@@ -151,3 +151,88 @@ mtext(side = 2, line = 1.5, c(0 : 4), cex = cex.plot.tex, at = seq(0, 4e7, 1e7),
 box()
 dev.off()
 
+#-------------------------------#
+#### Frequency of iterations ####
+#-------------------------------#
+
+## optim_sa ##
+freq.1 <- data.frame(n_iter = rep(NA, nloop), meth = "optim_sa")
+for(i in c(1 : nloop)) {
+  freq.1[i, c(1)] <- sum(as.data.frame(
+    optim_sa(fun = hi,
+                                          start = (c(10, 10)),
+                                          trace = TRUE,
+                                          lower = c(-40, -40),
+                                          upper=c(40, 40),
+                                          control = list(t0 = 500,
+                                                         nlimit = 50,
+                                                         r = 0.85,
+                                                         rf = 3,
+                                                         ac_acc = 0.1,
+                                                         dyn_rf = TRUE
+                                          )
+  )[c("trace")])$trace.n_inner)
+}
+
+## optim()  ##
+freq.2 <- data.frame(n_iter = rep(NA, nloop), meth = "optim_sann")
+for(i in c(1 : nloop)) {
+  freq.2$n_iter[i] <- optim(fn = hi, par = c(10, 10), method = "SANN", control = list(tmax = 500, reltol = 0.1, temp = 50, trace = TRUE))$counts[1]
+  # Always 9999
+}
+
+
+## Call GenSA  ##
+freq.3 <- data.frame(n_iter = rep(9999, nloop), meth = "GenSA")
+for(i in c(1 : nloop)) {
+   freq.3$n_iter[i] <- GenSA(fn = hi, par = c(10, 10), lower = c(-40, -40), upper = c(40, 40), control = list(temperature = 50, nb.stop.improvement = 30, maxit = 500))$counts
+}
+
+freq.4 <- data.frame(n_iter = rep(9999, nloop), meth = "optim_nm")
+for(i in c(1 : nloop)) {
+  freq.4$n_iter[i] <- optim(fn = hi, par = c(-10, -10),  method = "Nelder-Mead")$counts[1]
+}
+freq <- rbind(freq.4, freq.1, freq.2, freq.3)
+
+
+## Visualization & saving ##
+# save.image(file = '/home/khusman1/Documents/Veroeffentlichungen/optimization_essay/RFiles/Ex1_count.RData')
+# load(file = '/home/khusman1/Documents/Veroeffentlichungen/optimization_essay/RFiles/Ex1_speed.RData')
+
+
+cex.plot.tex <- 1.6
+tikzDevice::tikz('Fig/fig1_ex1-counts.tex', h = 6, w = 6)
+par(mar = c(6, 6, 2, 2) + 0.1)
+boxplot(freq$n_iter ~ freq$meth, ylim = c(0, 1e4), axes = FALSE)
+axis(1, labels = FALSE, lwd = 0, lwd.ticks = 1)
+mtext(side = 2, line = 5, "Frequency of iterations", cex = cex.plot.tex)
+mtext(side = 1, line = c(1.5, 3, 1.5, 3), at = c(1 : 4), c("optim (NM)", "optim\\_sa", "optim (SA)", "GenSA"), cex = cex.plot.tex)
+axis(2, las = 2, labels = FALSE, lwd = 0, lwd.ticks = 1)
+mtext(side = 2, line = 1.5, seq(0, 10000, 2000), cex = cex.plot.tex, at = seq(0, 10000, 2000), las = 2)
+box()
+dev.off()
+
+
+#### Plot 2-way graphic ####
+own.cex <- 1
+cex.plot.tex <- 2
+tikzDevice::tikz('Fig/fig1_ex1.tex', w = 14 * own.cex, h = 7 * own.cex)
+par(mfcol = c(1,2))
+par(mar = c(6, 5, 2, 4) + 0.1)
+boxplot(cbind(mb.4$time, mb.1$time, mb.2$time, mb.3$time), ylim = c(0, 4e7), axes = FALSE)
+axis(1, labels = FALSE, lwd = 0, lwd.ticks = 1)
+mtext(side = 2, line = 3.5, "Calculation time [millisecond]", cex = cex.plot.tex)
+mtext(side = 1, line = c(1.5, 3, 1.5, 3), at = c(1 : 4), c("optim (NM)", "optim\\_sa", "optim (SA)", "GenSA"), cex = cex.plot.tex)
+axis(2, las = 2, labels = FALSE, lwd = 0, lwd.ticks = 1)
+mtext(side = 2, line = 1.5, c(0 : 4), cex = cex.plot.tex, at = seq(0, 4e7, 1e7), las = 2)
+box()
+
+par(mar = c(7, 5, 2, 3) + 0.1)
+boxplot(freq$n_iter ~ freq$meth, ylim = c(0, 1e4), axes = FALSE)
+axis(1, labels = FALSE, lwd = 0, lwd.ticks = 1)
+mtext(side = 2, line = 5.5, "Frequency of iterations", cex = cex.plot.tex)
+mtext(side = 1, line = c(1.5, 3, 1.5, 3), at = c(1 : 4), c("optim (NM)", "optim\\_sa", "optim (SA)", "GenSA"), cex = cex.plot.tex)
+axis(2, las = 2, labels = FALSE, lwd = 0, lwd.ticks = 1)
+mtext(side = 2, line = 1.5, seq(0, 10000, 2000), cex = cex.plot.tex, at = seq(0, 10000, 2000), las = 2)
+box()
+dev.off()
