@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  23 MAR 2017 19:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.7.14)  26 MAR 2017 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **RJwrapper.tex
 (./RJwrapper.tex
 LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -1175,7 +1175,7 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen257
 )
-(/usr/share/texmf/tex/latex/algorithm2e/algorithm2e.sty
+(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
 \c@AlgoLine=\count145
 
@@ -1480,23 +1480,19 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 141.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 141.
-[6] (./Fig/fig1_ex1.tex)
-Overfull \hbox (15.94131pt too wide) in paragraph at lines 159--160
- [][] 
- []
-
-[7]
+[6] [7]
 Package epstopdf Info: Source file: <Fig/fig2-ex2-plot.eps>
-(epstopdf)                    date: 2017-03-23 13:04:18
+(epstopdf)                    date: 2017-03-25 17:02:54
 (epstopdf)                    size: 3394604 bytes
 (epstopdf)             Output file: <Fig/fig2-ex2-plot-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-23 13:05:00
+(epstopdf)                    date: 2017-03-25 17:02:54
 (epstopdf)                    size: 405749 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig/fig2-ex2-plot-eps-conv
 erted-to.pdf Fig/fig2-ex2-plot.eps>
 (epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
- <Fig/fig2-ex2-plot-eps-converted-to.pdf, id=292, 607.26875pt x 303.1325pt>
+
+<Fig/fig2-ex2-plot-eps-converted-to.pdf, id=293, 607.26875pt x 303.1325pt>
 File: Fig/fig2-ex2-plot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig/fig2-ex2-plot-eps-converted-to.pdf>
@@ -1513,7 +1509,7 @@ Overfull \hbox (9.95602pt too wide) in paragraph at lines 190--191
 \tf@brf=\write6
 \openout6 = `RJwrapper.brf'.
 
- [9] [10])) [11]
+ [9]) [10]) [11]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 26.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 26.
  (./RJwrapper.aux)
@@ -1522,35 +1518,31 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 26.
 Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
 (rerunfilecheck)             Checksum: DDCE5345D6998C17EEB6B4E14B6E5E56;911.
 Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
-(rerunfilecheck)             Checksum: 082028419A5C4F0A680852276E937ACA;2894.
+(rerunfilecheck)             Checksum: DEF092897EE3BADC348A7A0DBBB4D826;2894.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 1061 ({)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 23092 strings out of 494860
- 408552 string characters out of 6177603
- 1983880 words of memory out of 5000000
- 25590 multiletter control sequences out of 15000+600000
- 57413 words of font info for 259 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 62i,21n,57p,3409b,2749s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t
-1-0.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
-texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/u
-plr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RJwrapper.pdf (11 pages, 794292 bytes).
+ 23058 strings out of 493029
+ 407717 string characters out of 6136234
+ 520415 words of memory out of 5000000
+ 25786 multiletter control sequences out of 15000+600000
+ 59015 words of font info for 260 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 62i,21n,56p,3409b,750s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/
+share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-
+dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/upl
+r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on RJwrapper.pdf (11 pages, 597683 bytes).
 PDF statistics:
  433 PDF objects out of 1000 (max. 8388607)
  403 compressed objects within 5 object streams
  92 named destinations out of 1000 (max. 500000)
- 41074 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 43122 words of extra memory for PDF output out of 51595 (max. 10000000)
 

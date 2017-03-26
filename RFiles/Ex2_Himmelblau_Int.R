@@ -58,7 +58,7 @@ int_programming <- optim_sa(fun = hi,
 
 own.cex <- 0.6
 
-postscript('Fig/fig2-ex2-plot.eps', w = 14 * own.cex, h = 7 * own.cex, paper = "special", horizontal = FALSE)
+#postscript('Fig/fig2-ex2-plot.eps', w = 14 * own.cex, h = 7 * own.cex, paper = "special", horizontal = FALSE)
 par(mfcol = c(1,2))
 plot(int_programming)
 plot(int_programming, type = "contour", lower = c(-5, -5), upper = c(5, 5))
