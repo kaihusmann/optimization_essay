@@ -58,20 +58,21 @@ int_programming <- optim_sa(fun = hi,
 
 own.cex <- 0.6
 
-#postscript('Fig/fig2-ex2-plot.eps', w = 14 * own.cex, h = 7 * own.cex, paper = "special", horizontal = FALSE)
+postscript('Fig/fig2-ex2-plot.eps', w = 14 * own.cex, h = 7 * own.cex, paper = "special", horizontal = FALSE)
 par(mfcol = c(1,2))
 plot(int_programming)
 plot(int_programming, type = "contour", lower = c(-5, -5), upper = c(5, 5))
 par(mar=c(3.5, 3.5, 1, 1) +0.1, new = TRUE)
-arrows(x0 = -3.5, y0 = 2.5, x1 = -2, y1  = 3, col = 'white', lwd = 4)
-arrows(x0 = -3.5, y0 = 2.5, x1 = -2, y1  = 3, col = 'black', lwd = 2)
-text(x = -3.9, y = 2.5, "12", cex = 1.2, col = 'white')
-text(x = -3.9, y = 2.5, "12", cex = 1, col = 'black')
 
-arrows(x0 = -2.5, y0 = -1.5, x1 = -4, y1  = -1, col = 'white', lwd = 4)
-arrows(x0 = -2.5, y0 = -1.5, x1 = -4, y1  = -1, col = 'black', lwd = 2)
-text(x = -2.1, y = -1.5, "21", cex = 1.2, col = 'white')
-text(x = -2.1, y = -1.5, "21", cex = 1, col = 'black')
+arrows(x0 = 1.5, y0 = -0.5, x1 = 3, y1  = 0, col = 'white', lwd = 4)
+arrows(x0 = 1.5, y0 = -0.5, x1 = 3, y1  = 0, col = 'black', lwd = 2)
+# text(x = 1.1, y = -0.5, "10", cex = 1.2, col = 'white')
+text(x = 1.1, y = -0.5, "10", cex = 1, col = 'black')
+
+arrows(x0 = 0.5, y0 = -2.5, x1 = 2, y1  = -3, col = 'white', lwd = 4)
+arrows(x0 = 0.5, y0 = -2.5, x1 = 2, y1  = -3, col = 'black', lwd = 2)
+# text(x = 0.1, y = -2.5, "19", cex = 1.2, col = 'white', adj = 1)
+text(x = 0.1, y = -2.5, "19", cex = 1, col = 'black')
 
 dev.off()
 
