@@ -79,5 +79,28 @@ dev.off()
 # save.image(file = '/home/khusman1/Documents/Veroeffentlichungen/optimization_essay/RFiles/Ex2_Integer.RData')
 # load(file = '/home/khusman1/Documents/Veroeffentlichungen/optimization_essay/RFiles/Ex2_Integer.RData')
 
+N <- 10000
+boot_int_programming <- rep(NA, N)
+for (i in c(1 : N)) {
+  try(boot_int_programming[i] <- optim_sa(fun = hi,
+                            start = (c(10, 10)),
+                            trace = TRUE,
+                            lower = c(-40, -40),
+                            upper=c(40, 40),
+                            control = list(t0 = 500,
+                                           nlimit = 50,
+                                           r = 0.85,
+                                           rf = 3,
+                                           ac_acc = 0.1,
+                                           dyn_rf = TRUE,
+                                           vf = var_func_int
+                            )
+)$function_value)
+}
+hist(boot_int_programming)
+summary(factor(boot_int_programming))
+# 67.28 %
+
 ## optim (SA) ##
 optim(par = c(10, 10), fn = hi, gr = var_func_int_gr, method = "SANN", control = list(trace = TRUE))
+

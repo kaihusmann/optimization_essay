@@ -28,25 +28,27 @@ etpt <- function (x) {
   return(sum(t) + 200 * D)
 }
 
-tt <- optim_sa(fun = etpt,
+
+  optim_sa(fun = etpt,
          start = (c(25, -25)),
-         trace = TRUE,
+         trace = FALSE,
          lower = c(-50, -50),
          upper=c(50, 50),
          control = list(t0 = 100,
                         t_min = 0.1,
-                        nlimit = 500,
-                        r = 0.9,
+                        nlimit = 100,
+                        r = 0.99,
                         rf = 3,
-                        ac_acc = 0.1,
+                        ac_acc = 0.01,
                         dyn_rf = TRUE
          )
 )
+
 plot(tt, type = 'contour')
 tt$function_value
 tt$par
 tt
 
-
-optim(par = rep(50, 2), fn = etpt, method = "SANN")
-
+m.2 <- microbenchmark(optim(par = rep(50, 2), fn = etpt, method = "SANN"), times = 10)
+m.1
+m.2
