@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  27 MAR 2017 19:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  30 MAR 2017 13:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1521,14 +1521,8 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 26.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 26.
 Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
 (rerunfilecheck)             Checksum: DDCE5345D6998C17EEB6B4E14B6E5E56;911.
-
-
-Package rerunfilecheck Warning: File `RJwrapper.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `RJwrapper.brf':
-(rerunfilecheck)             Before: DEF092897EE3BADC348A7A0DBBB4D826;2894
-(rerunfilecheck)             After:  311E68371BD8F33BF4792FF08FC22419;2895.
+Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
+(rerunfilecheck)             Checksum: 311E68371BD8F33BF4792FF08FC22419;2895.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
  )
 (\end occurred inside a group at level 1)
@@ -1538,7 +1532,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
 Here is how much of TeX's memory you used:
  23095 strings out of 494860
  408597 string characters out of 6177603
- 1984534 words of memory out of 5000000
+ 1984593 words of memory out of 5000000
  25592 multiletter control sequences out of 15000+600000
  59015 words of font info for 260 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -1553,7 +1547,7 @@ ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RJwrapper.pdf (11 pages, 794820 bytes).
+Output written on RJwrapper.pdf (11 pages, 795163 bytes).
 PDF statistics:
  433 PDF objects out of 1000 (max. 8388607)
  403 compressed objects within 5 object streams
