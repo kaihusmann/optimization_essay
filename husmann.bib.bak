@@ -1,29 +1,6 @@
 % This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
-@article{boston_1999,
-  title={An analysis of Monte Carlo integer programming, simulated annealing, and tabu search heuristics for solving spatial harvest scheduling problems},
-  author={Boston, Kevin and Bettinger, Pete},
-  journal={Forest science},
-  volume={45},
-  number={2},
-  pages={292--301},
-  year={1999},
-  publisher={Society of American Foresters}
-}
-
-@article{cardoso_1997,
-  title={A simulated annealing approach to the solution of MINLP problems},
-  author={Cardoso, Margarida F and Salcedo, RL and de Azevedo, S Feyo and Barbosa, D},
-  journal={Computers \& chemical engineering},
-  volume={21},
-  number={12},
-  pages={1349--1364},
-  year={1997},
-  publisher={Elsevier}
-}
-
-
 
 @Article{cerny_1985,
   Title                    = {Thermodynamical approach to the traveling salesman problem: An efficient simulation algorithm},
@@ -71,6 +48,30 @@
   Volume                   = {35},
 
   Publisher                = {ACM}
+}
+
+@Article{boston_1999,
+  Title                    = {An analysis of Monte Carlo integer programming, simulated annealing, and tabu search heuristics for solving spatial harvest scheduling problems},
+  Author                   = {Boston, Kevin and Bettinger, Pete},
+  Journal                  = {Forest science},
+  Year                     = {1999},
+  Number                   = {2},
+  Pages                    = {292--301},
+  Volume                   = {45},
+
+  Publisher                = {Society of American Foresters}
+}
+
+@Article{cardoso_1997,
+  Title                    = {A simulated annealing approach to the solution of MINLP problems},
+  Author                   = {Cardoso, Margarida F and Salcedo, RL and de Azevedo, S Feyo and Barbosa, D},
+  Journal                  = {Computers \& chemical engineering},
+  Year                     = {1997},
+  Number                   = {12},
+  Pages                    = {1349--1364},
+  Volume                   = {21},
+
+  Publisher                = {Elsevier}
 }
 
 @Article{clarke_1964,
@@ -181,6 +182,21 @@
   Volume                   = {1}
 }
 
+@Book{hansen_2014,
+  Title                    = {Waldwachstumskundliche {Softwaresysteme} auf {Basis} von {TreeGrOSS}: {Anwendung} und theoretische {Grundlagen}},
+  Author                   = {Hansen, Jan and Nagel, Jürgen},
+  Publisher                = {Univ.-Verl.},
+  Year                     = {2014},
+
+  Address                  = {Göttingen},
+  Series                   = {Beiträge aus der {Nordwestdeutschen} {Forstlichen} {Versuchsanstalt} / {Nordwestdeutsche} {Forstliche} {Versuchsanstalt}. - {Göttingen} : {Univ}.-{Verl}. {Göttingen}, 2007- ; 11Universitätsdrucke {Göttingen}},
+
+  File                     = {Library Catalog Entry Snapshot:/home/khusman1/.mozilla/firefox/ykffmvee.default/zotero/storage/UITA5HV3/PPN.html:text/html},
+  ISBN                     = {978-3-86395-149-8},
+  Keywords                 = {Forstertrag / Software},
+  Shorttitle               = {Waldwachstumskundliche {Softwaresysteme} auf {Basis} von {TreeGrOSS}}
+}
+
 @Book{hansen_2012,
   Title                    = {Modellbasierte Entscheidungsunterstützung für den Forstbetrieb: Optimierung kurzfristiger Nutzungsoptionen und mittelfristiger Strategien unter Verwendung metaheuristischer Verfahren und parallelen Rechnens},
   Author                   = {Hansen, Jan Hendrik},
@@ -194,25 +210,11 @@
   Timestamp                = {2017.02.09}
 }
 
-
-@book{hansen_2014,
-	address = {Göttingen},
-	series = {Beiträge aus der {Nordwestdeutschen} {Forstlichen} {Versuchsanstalt} / {Nordwestdeutsche} {Forstliche} {Versuchsanstalt}. - {Göttingen} : {Univ}.-{Verl}. {Göttingen}, 2007- ; 11Universitätsdrucke {Göttingen}},
-	title = {Waldwachstumskundliche {Softwaresysteme} auf {Basis} von {TreeGrOSS}: {Anwendung} und theoretische {Grundlagen}},
-	isbn = {978-3-86395-149-8},
-	shorttitle = {Waldwachstumskundliche {Softwaresysteme} auf {Basis} von {TreeGrOSS}},
-	publisher = {Univ.-Verl.},
-	author = {Hansen, Jan and Nagel, Jürgen},
-	year = {2014},
-	keywords = {Forstertrag / Software},
-	file = {Library Catalog Entry Snapshot:/home/khusman1/.mozilla/firefox/ykffmvee.default/zotero/storage/UITA5HV3/PPN.html:text/html}
-}
-
-@book{himmelblau_1972,
-  title={Applied nonlinear programming},
-  author={Himmelblau, David Mautner},
-  year={1972},
-  publisher={McGraw-Hill Companies}
+@Book{himmelblau_1972,
+  Title                    = {Applied nonlinear programming},
+  Author                   = {Himmelblau, David Mautner},
+  Publisher                = {McGraw-Hill Companies},
+  Year                     = {1972}
 }
 
 @Article{ingber_1993,
@@ -227,15 +229,16 @@
   Publisher                = {Elsevier}
 }
 
-@book{kangas_2015,
-	address = {Cham},
-	edition = {2nd ed},
-	series = {Managing {Forest} {Ecosystems}},
-	title = {Decision {Support} for {Forest} {Management}},
-	number = {30},
-	publisher = {Springer International Publishing},
-	author = {Kangas, Annika and Kurttila, Mikko and Hujala, Teppo and Eyvindson, Kyle and Kangas, Jyrki},
-	year = {2015},
+@Book{kangas_2015,
+  Title                    = {Decision {Support} for {Forest} {Management}},
+  Author                   = {Kangas, Annika and Kurttila, Mikko and Hujala, Teppo and Eyvindson, Kyle and Kangas, Jyrki},
+  Publisher                = {Springer International Publishing},
+  Year                     = {2015},
+
+  Address                  = {Cham},
+  Edition                  = {2nd ed},
+  Number                   = {30},
+  Series                   = {Managing {Forest} {Ecosystems}}
 }
 
 @Article{kirkpatrick_1983,
@@ -331,11 +334,11 @@
   Timestamp                = {2017.02.09}
 }
 
-@book{redsven_2012,
-	title = {{MELA}2012 {Reference} {Manual} (2nd edition)},
-	author = {Redsven, V. and Hirvelä, H. and Härkönen, K. and Salminen, O. and Siitonen, M. },
-	year = 2012,
-	publisher = {The Finnish Forest Research Institute}
+@Book{redsven_2012,
+  Title                    = {{MELA}2012 {Reference} {Manual} (2nd edition)},
+  Author                   = {Redsven, V. and Hirvelä, H. and Härkönen, K. and Salminen, O. and Siitonen, M. },
+  Publisher                = {The Finnish Forest Research Institute},
+  Year                     = {2012}
 }
 
 @Article{rosenbrock_1960,

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  19 APR 2017 09:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.4)  21 APR 2017 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1520,9 +1520,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 26.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 26.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 26.
 Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
-(rerunfilecheck)             Checksum: AB3B6C48E0F227B3A310ABA757940941;836.
-Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
-(rerunfilecheck)             Checksum: 4C18A4F06F7886AEA5E428818A25DAE1;2848.
+(rerunfilecheck)             Checksum: F39311FA7795AC442FB8E2B6DC43871D;904.
+
+
+Package rerunfilecheck Warning: File `RJwrapper.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `RJwrapper.brf':
+(rerunfilecheck)             Before: E9B5BFE71507DA911CCBC19153B09A4D;2848
+(rerunfilecheck)             After:  5B0CB63F4825016416AA91E1DD0CE561;3014.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
  )
 (\end occurred inside a group at level 1)
@@ -1530,10 +1536,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 23093 strings out of 494860
- 408569 string characters out of 6177603
- 1986594 words of memory out of 5000000
- 25591 multiletter control sequences out of 15000+600000
+ 23114 strings out of 494860
+ 408951 string characters out of 6177603
+ 1986725 words of memory out of 5000000
+ 25609 multiletter control sequences out of 15000+600000
  59015 words of font info for 260 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  62i,21n,58p,3409b,2774s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1544,13 +1550,14 @@ are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/u
-plr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RJwrapper.pdf (11 pages, 793786 bytes).
+nts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
+o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on RJwrapper.pdf (11 pages, 799611 bytes).
 PDF statistics:
- 429 PDF objects out of 1000 (max. 8388607)
- 400 compressed objects within 4 object streams
- 91 named destinations out of 1000 (max. 500000)
+ 443 PDF objects out of 1000 (max. 8388607)
+ 412 compressed objects within 5 object streams
+ 94 named destinations out of 1000 (max. 500000)
  43114 words of extra memory for PDF output out of 51595 (max. 10000000)
 

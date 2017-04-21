@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -77,6 +77,12 @@ C.~Geiger and C.~Kanzow.
 \newblock \emph{Numerische Verfahren zur L{\"o}sung unregestrierter
   Optimierungsaufgaben}, 1999.
 
+\bibitem[Genest et~al.(2007)Genest, Quessy, and Remillard]{genest_2007}
+C.~Genest, J.-F. Quessy, and B.~Remillard.
+\newblock Asymptotic local efficiency of cramer-von mises tests for
+  multivariate independence.
+\newblock \emph{The Annals of Statistics}, 2007.
+
 \bibitem[Goffe et~al.(1996)]{goffe_1996}
 W.~L. Goffe et~al.
 \newblock Simann: A global optimization algorithm using simulated annealing.
@@ -100,6 +106,17 @@ J.~H. Hansen.
   Strategien unter Verwendung metaheuristischer Verfahren und parallelen
   Rechnens}.
 \newblock Cuvillier, Göttingen, 1. aufl. edition, 2012.
+
+\bibitem[Herwartz(2014)]{herwartz_2014}
+H.~Herwartz.
+\newblock Structural analysis with independent innovations.
+\newblock \emph{cege Discussion Papers}, 2014.
+
+\bibitem[Herwartz and Pl{\"o}dt(2015)]{herwartz_2015}
+H.~Herwartz and M.~Pl{\"o}dt.
+\newblock The macroeconomic effects of oil price shocks: Evidence from a
+  statistical identification approach.
+\newblock \emph{Journal of International Money and Finance}, 2015.
 
 \bibitem[Himmelblau(1972)]{himmelblau_1972}
 D.~M. Himmelblau.
