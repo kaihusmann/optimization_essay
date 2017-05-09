@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.7.14)  30 APR 2017 10:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.9)  9 MAY 2017 20:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1010,7 +1010,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 62.
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
-Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \ttl@box=\box37
 \beforetitleunit=\skip54
 \aftertitleunit=\skip55
@@ -1487,10 +1487,10 @@ Overfull \hbox (15.94131pt too wide) in paragraph at lines 162--162
 
 [7]
 Package epstopdf Info: Source file: <Fig/fig2-ex2-plot.eps>
-(epstopdf)                    date: 2017-04-15 13:56:24
+(epstopdf)                    date: 2017-04-02 16:25:21
 (epstopdf)                    size: 3394464 bytes
 (epstopdf)             Output file: <Fig/fig2-ex2-plot-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-15 13:56:24
+(epstopdf)                    date: 2017-04-02 16:25:21
 (epstopdf)                    size: 405952 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig/fig2-ex2-plot-eps-conv
 erted-to.pdf Fig/fig2-ex2-plot.eps>
@@ -1526,11 +1526,11 @@ Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
  ) 
 Here is how much of TeX's memory you used:
- 23133 strings out of 493029
- 409236 string characters out of 6136234
- 1977750 words of memory out of 5000000
+ 23127 strings out of 493029
+ 409183 string characters out of 6136234
+ 1977748 words of memory out of 5000000
  25843 multiletter control sequences out of 15000+600000
- 59743 words of font info for 268 fonts, out of 8000000 for 9000
+ 59477 words of font info for 264 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,21n,58p,3409b,943s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/
@@ -1544,7 +1544,7 @@ ic/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/
 uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RJwrapper.pdf (12 pages, 802276 bytes).
+Output written on RJwrapper.pdf (12 pages, 802226 bytes).
 PDF statistics:
  454 PDF objects out of 1000 (max. 8388607)
  422 compressed objects within 5 object streams
