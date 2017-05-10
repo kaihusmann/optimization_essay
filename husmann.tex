@@ -211,6 +211,8 @@ It showed that forest treatment optimization was actually possible using \CRANpk
 \section{Discussion and outlook}
 All in all SA methods are advantageous compared to classical optimization procedures, if the loss function is non-linear and multimodal. Our simulated annealing approach optimizes these functions quite well. It might not be faster than the standard simulated annealing approach of the \CRANpkg{stats} package, but therefore it was not designed. However, due to the shrinkage of the parameter space and the extra stopping criteria it manages to need less steps than the standard approach. Moreover the main advantage of our new approach is to be able to deal with irregular parameter spaces, as well as with non-continuous and sophisticated loss functions, where the standard approach is reaches its limits. In our examples we show that problems with these characteristics exists and that our algorithm solves these problems. Furthermore there are several examples of loss functions in natural science where some combinations of variables are restricted and our approach shows its benefits.
 
+\section{Acknowledgements}
+The authors are grateful to the Project Management Jülich of the Federal Ministry of Education and Research for funding this research through the Cluster \textit{Bio-Economy} (031A294).
 \bibliography{husmann}
 
 \address{Kai Husmann\\
