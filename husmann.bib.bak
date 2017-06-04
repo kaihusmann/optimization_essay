@@ -172,6 +172,16 @@
   Timestamp                = {2017.02.09}
 }
 
+@Article{genest_2007,
+  Title                    = {Asymptotic local efficiency of Cramer-von Mises tests for multivariate independence},
+  Author                   = {Genest, C. and Quessy, J.-F. and Remillard, B},
+  Journal                  = {The Annals of Statistics},
+  Year                     = {2007},
+
+  Owner                    = {alex},
+  Timestamp                = {2017.01.30}
+}
+
 @Article{goffe_1996,
   Title                    = {SIMANN: A global optimization algorithm using simulated annealing},
   Author                   = {Goffe, William L and others},
@@ -208,6 +218,26 @@
 
   Owner                    = {khusman1},
   Timestamp                = {2017.02.09}
+}
+
+@Article{herwartz_2014,
+  Title                    = {Structural analysis with independent innovations},
+  Author                   = {Herwartz, H.},
+  Journal                  = {cege Discussion Papers},
+  Year                     = {2014},
+
+  Owner                    = {alex},
+  Timestamp                = {2017.01.15}
+}
+
+@Article{herwartz_2015,
+  Title                    = {The macroeconomic effects of oil price shocks: Evidence from a statistical identification approach},
+  Author                   = {Herwartz, H. and Pl{\"o}dt, Martin},
+  Journal                  = {Journal of International Money and Finance},
+  Year                     = {2015},
+
+  Owner                    = {alex},
+  Timestamp                = {2017.04.21}
 }
 
 @Book{himmelblau_1972,
@@ -278,6 +308,15 @@
   Volume                   = {83},
 
   Publisher                = {Elsevier}
+}
+
+@incollection{lutkepohl_2006,
+  title={Structural vector autoregressive analysis for cointegrated variables},
+  author={L{\"u}tkepohl, Helmut},
+  booktitle={Modern Econometric Analysis},
+  pages={73--86},
+  year={2006},
+  publisher={Springer}
 }
 
 @Book{mathews_2004,

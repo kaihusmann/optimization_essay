@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{31}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -161,6 +161,17 @@ N.~Metropolis, A.~W. Rosenbluth, M.~N. Rosenbluth, A.~H. Teller, and E.~Teller.
 \newblock Equation of state calculations by fast computing machines.
 \newblock \emph{The journal of chemical physics}, 21\penalty0 (6):\penalty0
   1087--1092, 1953.
+
+\bibitem[Möhring(2010)]{mohring_2010}
+B.~Möhring.
+\newblock Optimierung forstlicher {Produktion} unter {Beachtung} von
+  finanziellen {Restriktionen} {\textbar} {Optimisation} of forest production
+  under financial restrictions.
+\newblock \emph{Schweizerische Zeitschrift fur Forstwesen}, 161\penalty0
+  (9):\penalty0 346--354, Sept. 2010.
+\newblock ISSN 0036-7818.
+\newblock \doi{10.3188/szf.2010.0346}.
+\newblock URL \url{http://szf-jfs.org/doi/abs/10.3188/szf.2010.0346}.
 
 \bibitem[Nelder and Mead(1965)]{nelder_1965}
 J.~Nelder and R.~Mead.

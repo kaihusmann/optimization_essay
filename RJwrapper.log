@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.9)  4 JUN 2017 15:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.7.14)  4 JUN 2017 18:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1010,7 +1010,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 62.
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
-Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
 \ttl@box=\box37
 \beforetitleunit=\skip54
 \aftertitleunit=\skip55
@@ -1487,10 +1487,10 @@ Overfull \hbox (15.94131pt too wide) in paragraph at lines 159--159
 
 [7]
 Package epstopdf Info: Source file: <Fig/fig2-ex2-plot.eps>
-(epstopdf)                    date: 2017-04-02 16:25:21
+(epstopdf)                    date: 2017-04-15 13:56:24
 (epstopdf)                    size: 3394464 bytes
 (epstopdf)             Output file: <Fig/fig2-ex2-plot-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-02 16:25:21
+(epstopdf)                    date: 2017-04-15 13:56:24
 (epstopdf)                    size: 405952 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig/fig2-ex2-plot-eps-conv
 erted-to.pdf Fig/fig2-ex2-plot.eps>
@@ -1514,7 +1514,7 @@ Overfull \hbox (9.95602pt too wide) in paragraph at lines 187--188
 \openout6 = `RJwrapper.brf'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--1
+Underfull \hbox (badness 10000) in paragraph at lines 214--1
 
  []
 
@@ -1527,17 +1527,17 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 26.
 Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
 (rerunfilecheck)             Checksum: 019F191335D9F9622AC38428E3560978;968.
 Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
-(rerunfilecheck)             Checksum: AC1CC7620BF763ADD4BEE4B5CA9C43BA;3071.
+(rerunfilecheck)             Checksum: 1168A33796DCBCCA3D5C548E618F7BCC;3125.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
  ) 
 Here is how much of TeX's memory you used:
- 23123 strings out of 493029
- 409129 string characters out of 6136234
- 1744628 words of memory out of 5000000
- 25845 multiletter control sequences out of 15000+600000
+ 23130 strings out of 493029
+ 409257 string characters out of 6136234
+ 1744661 words of memory out of 5000000
+ 25851 multiletter control sequences out of 15000+600000
  60592 words of font info for 260 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,21n,58p,3416b,943s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,21n,58p,3410b,943s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/
 share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-
 dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/te
@@ -1550,10 +1550,10 @@ o/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RJwrapper.pdf (12 pages, 782168 bytes).
+Output written on RJwrapper.pdf (12 pages, 783317 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
- 432 compressed objects within 5 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 472 PDF objects out of 1000 (max. 8388607)
+ 439 compressed objects within 5 object streams
+ 99 named destinations out of 1000 (max. 500000)
  43122 words of extra memory for PDF output out of 51595 (max. 10000000)
 
